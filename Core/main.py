@@ -3,8 +3,8 @@ import dash
 import plotly.express as px
 import dash_bootstrap_components as dbc
 from dash import html, dcc
-from dash import Input, Output, callback
-
+from dash import Input, Output
+from IPython.display import display
 # reads in a file, converts it to a dataframe, & cleans it
 def process(file_path):
     df = pd.read_csv(file_path)
@@ -13,7 +13,7 @@ def process(file_path):
         df.fillna(0, inplace = True)
 
     for column in df.columns:
-        if pd.api.types.is_string_dtype(column):
+        if pd.api.types.is_string_dtype(df[column]):
             df[column] = df[column].str.strip()
     
     return df
@@ -26,10 +26,10 @@ def run():
     merged = pd.merge(wage_data, rpp_data, on = "GeoFIPS")
     merged = merged.drop(columns = ["GeoFIPS", "Occupation Code", "GeoName_y"])
     # calculate median purchasing power
-    merged["SOL Median"] = (merged["Annual Salary Median"].astype(float) / merged["RPP 2023"].astype(float) / 100).round(2)
+    merged["Median Purchasing Power"] = (merged["Annual Salary Median"].astype(float) / merged["RPP 2023"].astype(float) / 100).round(2)
     # rename & get relevant columns
     merged = merged.rename(columns = {"GeoName_x" : "Area", "Description" : "Category"})
-    merged = merged[["Area", "Occupation Title", "Annual Salary Median", "Category", "RPP 2023", "SOL Median"]]
+    merged = merged[["Area", "Occupation Title", "Annual Salary Median", "Category", "RPP 2023", "Median Purchasing Power"]]
     return merged
 
 merged = run()
@@ -151,21 +151,21 @@ def display_page(pathname):
 )
 
 def update_page1(occupation_input, category_input):
-        filtered_df = merged[(merged["Occupation Title"] == occupation_input) & (merged["Category"] == category_input)]
-        filtered_df = filtered_df.sort_values(by = "SOL Median", ascending = False)
+    filtered_df = merged[(merged["Occupation Title"] == occupation_input) & (merged["Category"] == category_input)]
+    filtered_df = filtered_df.sort_values(by = "Median Purchasing Power", ascending = False)
 
-        if filtered_df.empty:
-            return px.bar()
+    if filtered_df.empty:
+        return px.bar()
 
-        fig1 = px.bar(
-            filtered_df.head(8),
-            x = "Area",
-            y = "SOL Median",
-            title = "Metropolitan Areas with Highest Standard of Living",
-            labels = {"SOL Median" : "Median Standard of Living", "Area": "Area"},
-            height = 400
-        )
-        return fig1
+    fig1 = px.bar(
+        filtered_df.head(8),
+        x = "Area",
+        y = "Median Purchasing Power",
+        title = "Metropolitan Areas with Highest Standard of Living",
+        labels = {"Median Purchasing Power" : "Median Purchasing Power", "Area": "Area"},
+        height = 400
+    )
+    return fig1
 
 # Update page 2
 @app.callback(
@@ -175,20 +175,20 @@ def update_page1(occupation_input, category_input):
 )
 
 def update_page2(occupation_input, location_input):
-        filtered_df = merged[(merged["Occupation Title"] == occupation_input) & (merged["Area"] == location_input)]
-       
-        if filtered_df.empty:
-            return px.bar()
+    filtered_df = merged[(merged["Occupation Title"] == occupation_input) & (merged["Area"] == location_input)]
+    
+    if filtered_df.empty:
+        return px.bar()
 
-        fig2 = px.bar(
-            filtered_df.head(5),
-            x = "Category",
-            y = "SOL Median",
-            title = "Standard of Living by Category",
-            labels = {"SOL Median" : "Median Standard of Living", "Category": "Category"},
-            height = 400
-        )
-        return fig2
+    fig2 = px.bar(
+        filtered_df.head(5),
+        x = "Category",
+        y = "Median Purchasing Power",
+        title = "Purchasing Power by Spending Category",
+        labels = {"Median Purchasing Power" : "Median Purchasing Power", "Category": "Category"},
+        height = 400
+    )
+    return fig2
 
 if __name__ == '__main__':
     app.run(debug = True)
