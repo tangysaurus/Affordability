@@ -64,6 +64,9 @@ app.layout = html.Div([
 def home_layout():
     return html.Div([
         html.H3("Welcome to the standard of living dashboard!", className = "mb-4"),
+        html.P("See how purchasing power varies across geography and spending category by occupation. " \
+        "This app uses occupational wage data from the U.S. Bureau of Labor Statistics and regional price parity data from the U.S. Bureau of Economic Analysis. " \
+        "For a given occupation and geographical location, purchasing power is calculated by multiplying the ratio of median annual salary to regional price parity by 100."),
         dcc.Link("Compare by region", href="/page-1"),
         html.Br(),
         dcc.Link("Compare by spending category", href="/page-2")
