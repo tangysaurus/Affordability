@@ -4,6 +4,7 @@ import plotly.express as px
 import dash_bootstrap_components as dbc
 from dash import html, dcc
 from dash import Input, Output
+
 # reads in a file, converts it to a dataframe, & cleans it
 def process(file_path):
     df = pd.read_csv(file_path)
@@ -19,8 +20,8 @@ def process(file_path):
 
 def run():
     # process wage & rpp data
-    wage_data = process("C:\\Users\\Kaden\\OneDrive\\Projects\\Affordability\\data\\Metropolitan.csv")
-    rpp_data = process("C:\\Users\\Kaden\\OneDrive\\Projects\\Affordability\\data\\MARPP_MSA_2008_2023.csv")
+    wage_data = process("data/regional_salaries.csv")
+    rpp_data = process("data/regional_prices.csv")
     # merge datasets on GeoFIPS
     merged = pd.merge(wage_data, rpp_data, on = "GeoFIPS")
     merged = merged.drop(columns = ["GeoFIPS", "Occupation Code", "GeoName_y"])
