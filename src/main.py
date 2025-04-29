@@ -4,7 +4,6 @@ import plotly.express as px
 import dash_bootstrap_components as dbc
 from dash import html, dcc
 from dash import Input, Output
-from IPython.display import display
 # reads in a file, converts it to a dataframe, & cleans it
 def process(file_path):
     df = pd.read_csv(file_path)
@@ -35,6 +34,7 @@ def run():
 merged = run()
 
 app = dash.Dash(__name__, suppress_callback_exceptions = True, external_stylesheets = [dbc.themes.BOOTSTRAP])
+server = app.server
 app.title = "Standard of Living Dashboard"
 
 # Sidebar layout
