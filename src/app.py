@@ -1,14 +1,19 @@
 import dash
 import plotly.express as px
 import dash_bootstrap_components as dbc
+import json
+import pandas as pd
 from dash import html, dcc
 from dash import Input, Output, State
 from dash.dependencies import ALL
-from insights import get_job_insights 
+from fetch import fetch_jobs, extract_job_info
+from match import extract_resume_text_from_base64, get_matches
+from feedback import get_feedback, get_insights
+from dash.exceptions import PreventUpdate
 
 class App:
-    def __init__(self, df):
-        self.merged = df
+    def __init__(self, occupation_data):
+        self.occupation_data = occupation_data
         self.app = dash.Dash(__name__, suppress_callback_exceptions = True, external_stylesheets = [dbc.themes.BOOTSTRAP])
         server = self.app.server
         self.app.title = "Standard of Living Dashboard"
@@ -16,43 +21,92 @@ class App:
         self.define_callbacks()
 
     def define_layout(self):
-        # Sidebar layout
-        sidebar = dbc.Col([
-            html.H2("Dashboard", className="display-6 text-white mb-4"),
-            html.Hr(),
-            dbc.Nav([
-                dbc.NavLink("Home", href="/", active="exact"),
-                dbc.NavLink("Compare by region", href="/page-1", active="exact"),
-                dbc.NavLink("Compare by spending category", href="/page-2", active="exact"),
-                dbc.NavLink("Search for jobs", href = "/page-3", active = "exact")
-            ], vertical=True, pills=True, className="text-white")
-        ], width=3, className="bg-dark p-4 vh-100")
+        # Top Navbar layout
+        navbar = dbc.Navbar(
+            dbc.Container([
+                # Adding Font Awesome Icon via CDN link
+                html.Link(
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css", 
+                    rel="stylesheet"
+                ),
+                dbc.Row([
+                    dbc.Col(
+                        html.H2(
+                            [
+                                html.I(className="fas fa-chalkboard-teacher", style={"marginRight": "10px"}),
+                                "Career Coach",
+                            ],
+                            className="display-6 text-white mb-3"
+                        ),
+                        width="auto"),  # Title
+                    dbc.Col(
+                        dbc.Nav([
+                            dbc.NavLink("Home", href="/", active="exact", className="text-white"),
+                            dbc.NavLink("Compare by region", href="/page-1", active="exact", className="text-white"),
+                            dbc.NavLink("Compare by spending category", href="/page-2", active="exact", className="text-white"),
+                            dbc.NavLink("Search for jobs", href="/page-3", active="exact", className="text-white"),
+                        ], navbar=True, pills = True), 
+                        className="d-flex align-items-center"                   )
+                ], align = "center", className = "w-100")
+            ], fluid=True),
+            color="dark", dark=True, className="mb-4"
+        )
 
         # Content area placeholder
         content = dbc.Col(
             html.Div(id="page-content", className="p-4"),
-            width=9
+            width=12
         )
 
         # Main layout (URL tracker and page content placeholder)
         self.app.layout = html.Div([
             dcc.Location(id='url', refresh=False),
-            dbc.Row([sidebar, content], className = "gx-0")
+            navbar,
+            content
         ])
 
-    # Home page layout
     def home_layout(self):
-        return html.Div([
-            html.H3("Welcome to the standard of living dashboard!", className = "mb-4"),
-            html.P("See how purchasing power varies across geography and spending category by occupation. " \
-            "This app uses occupational wage data from the U.S. Bureau of Labor Statistics and regional price parity data from the U.S. Bureau of Economic Analysis. " \
-            "For a given occupation and geographical location, purchasing power is calculated by multiplying the ratio of median annual salary to regional price parity by 100."),
-            dcc.Link("Compare by region", href="/page-1"),
-            html.Br(),
-            dcc.Link("Compare by spending category", href="/page-2"),
-            html.Br(),
-            dcc.Link("Search for jobs", href = "/page-3")
-        ])
+        return html.Div(
+            children=[
+                html.Div(
+                    children=[
+                        html.H3("Welcome to Career Coach!", className="mb-4", style={'text-align': 'center', 'font-size': '2.5em'}),
+                        html.P(
+                            "If you're looking to advance your career, this is the place to be! \n"
+                            "Match with jobs based on your resume, generate concise job breakdowns, and get personalized feedback to help you craft the most competitive job application.",
+                            style={'text-align': 'center', 'font-size': '1.1em', 'margin-top': '20px', 'line-height': '1.6em'}
+                        ),
+                        html.Div(
+                            children=[
+                                dcc.Link("Search for jobs", href="/page-3", style={'display': 'block', 'margin-top': '10px', 'font-size': '1.2em', 'text-align': 'center'})
+                            ],
+                            style={'text-align': 'center', 'margin-top': '30px'}
+                        ),
+                        html.P(
+                            "Also, don't forget to use the standard of living dashboard to see how your purchasing power varies across geography and spending category. \n"
+                            "We've compiled occupational wage data from the U.S. Bureau of Labor Statistics and regional price parity data from the U.S. Bureau of Economic Analysis to help you make the most informed decisions. \n"
+                            "Note: purchasing power = median annual salary / regional price parity * 100",
+                            style={'text-align': 'center', 'font-size': '1.1em', 'margin-top': '20px', 'line-height': '1.6em'}
+                        ),
+                        html.Div(
+                            children=[
+                                dcc.Link("Compare by region", href="/page-1", style={'display': 'block', 'margin-top': '20px', 'font-size': '1.2em', 'text-align': 'center'}),
+                                dcc.Link("Compare by spending category", href="/page-2", style={'display': 'block', 'margin-top': '10px', 'font-size': '1.2em', 'text-align': 'center'})
+                            ],
+                            style={'text-align': 'center', 'margin-top': '30px'}
+                        ),
+                        html.H3("Our Mission", className="mb-4", style={'text-align': 'center', 'font-size': '2.5em', "margin-top": "50px"}),
+                        html.P(
+                            "It's simple, we want to empower you to make the best economic decisions! \n"
+                            "That's why we've built personalized tools to help you find and win the best jobs available. \n"
+                            "As your career coach, we hope to build your confidence so that you can go out and dominate the workforce.",
+                            style={'text-align': 'center', 'font-size': '1.1em', 'margin-top': '20px', 'line-height': '1.6em'}
+                        )
+                    ],
+                    style={'max-width': '800px', 'margin': '0 auto', 'padding': '20px'}
+                )
+            ]
+    )
 
     # Page 1 layout
     def page1_layout(self):
@@ -60,7 +114,7 @@ class App:
             dcc.Dropdown(
                 id = "occupation-dropdown1",
                 options = [
-                    {"label": occupation, "value": occupation} for occupation in self.merged["Occupation Title"].unique().tolist()
+                    {"label": occupation, "value": occupation} for occupation in self.occupation_data["Occupation Title"].unique().tolist()
                 ],
                 value = "All Occupations",
                 multi = False,
@@ -93,7 +147,7 @@ class App:
             dcc.Dropdown(
                 id = "occupation-dropdown2",
                 options = [
-                    {"label": occupation, "value": occupation} for occupation in self.merged["Occupation Title"].unique().tolist()
+                    {"label": occupation, "value": occupation} for occupation in self.occupation_data["Occupation Title"].unique().tolist()
                 ],
                 value = "All Occupations",
                 multi = False,
@@ -102,7 +156,7 @@ class App:
             dcc.Dropdown(
                 id = "location-dropdown2",
                 options = [
-                    {"label": location, "value": location} for location in self.merged["Area"].unique().tolist()
+                    {"label": location, "value": location} for location in self.occupation_data["Area"].unique().tolist()
                 ],
                 value = "Abilene, TX",
                 multi = False,
@@ -119,33 +173,77 @@ class App:
     # page 3 layout
     def page3_layout(self):
         return html.Div([
-            dcc.Dropdown(
-                id="occupation-dropdown3",
-                options=[
-                    {"label": occupation, "value": occupation} for occupation in self.merged["Occupation Title"].unique().tolist()
-                ],
-                value="All Occupations",
-                multi=False,
-                style={"width": "50%"}
-            ),
-            dcc.Input(
-                id="location-input",
-                type="text",
-                placeholder="Enter a city or address",
-                debounce=True,
-                style={"width": "50%"}
-            ),
+            html.Div([
+                dbc.Row([
+                    # Occupation dropdown
+                    dbc.Col(
+                        dcc.Dropdown(
+                            id="occupation-dropdown3",
+                            options=[
+                                {"label": occupation, "value": occupation}
+                                for occupation in self.occupation_data["Occupation Title"].unique().tolist()
+                            ],
+                            value="All Occupations",
+                            multi=False,
+                            placeholder="What job are you looking for?",
+                        ),
+                        width=5
+                    ),
 
-            dbc.Button("Search Jobs", id="search-button", color="primary", className="my-3"),
-            
-            html.Div(id="output-page3", className="mb-4"),
-            
-            dbc.Accordion([
-                dbc.AccordionItem([dcc.Graph(id="technical-skills-chart")], title="Top Technical Skills"),
-                dbc.AccordionItem([dcc.Graph(id="soft-skills-chart")], title="Top Soft Skills"),
-                dbc.AccordionItem([dcc.Graph(id="experience-chart")], title="Experience / Education"),
-            ], start_collapsed=True)
-        ])
+                    # Location input with location icon
+                    dbc.Col(
+                        dbc.InputGroup([
+                            dbc.InputGroupText("📍"),
+                            dbc.Input(
+                                id="location-input",
+                                type="text",
+                                placeholder="Enter a city or address",
+                                debounce=True,
+                            )
+                        ]),
+                        width=4
+                    ),
+
+                    # Search button
+                    dbc.Col(
+                        dbc.Button("Search Jobs", id="search-button", color="primary", className="w-100"),
+                        width=3
+                    ),
+                ], justify="center", className="my-4 g-2"),
+                # Resume upload section
+                dbc.Row([
+                    dbc.Col([
+                        html.Label("📄 Upload Your Resume (PDF)", className="form-label"),
+                        dcc.Upload(
+                            id="resume-upload",
+                            children=html.Div([
+                                "Drag and drop or ",
+                                html.A("select a PDF file")
+                            ]),
+                            style={
+                                "width": "100%",
+                                "height": "40px",
+                                "lineHeight": "40px",
+                                "borderWidth": "1px",
+                                "borderStyle": "dashed",
+                                "borderRadius": "10px",
+                                "textAlign": "center",
+                                "marginTop": "10px",
+                            },
+                            multiple=False,
+                            accept=".pdf"
+                        )
+                    ], width=12)
+                ], className="my-2"),
+            ], style={"maxWidth": "900px", "margin": "0 auto"}),  # center the search bar block
+        
+        # Loading spinner + output display
+        dcc.Loading(
+            id="loading-spinner",
+            type="circle",
+            children=html.Div(id="output-page3", className="mb-4")
+        )
+    ])
 
     def define_callbacks(self):
 
@@ -174,14 +272,14 @@ class App:
             
         def update_page1(occupation_input, category_input):
 
-            filtered_df = self.merged[(self.merged["Occupation Title"] == occupation_input) & (self.merged["Category"] == category_input)]
-            filtered_df = filtered_df.sort_values(by = "Median Purchasing Power", ascending = False)
+            filtered_occupation_data = self.occupation_data[(self.occupation_data["Occupation Title"] == occupation_input) & (self.occupation_data["Category"] == category_input)]
+            filtered_occupation_data = filtered_occupation_data.sort_values(by = "Median Purchasing Power", ascending = False)
 
-            if filtered_df.empty:
+            if filtered_occupation_data.empty:
                 return px.bar()
 
             fig1 = px.bar(
-                filtered_df.head(8),
+                filtered_occupation_data.head(8),
                 x = "Area",
                 y = "Median Purchasing Power",
                 title = "Metropolitan Areas with Highest Standard of Living",
@@ -199,13 +297,13 @@ class App:
         )
 
         def update_page2(occupation_input, location_input):
-            filtered_df = self.merged[(self.merged["Occupation Title"] == occupation_input) & (self.merged["Area"] == location_input)]
+            filtered_occupation_data = self.occupation_data[(self.occupation_data["Occupation Title"] == occupation_input) & (self.occupation_data["Area"] == location_input)]
             
-            if filtered_df.empty:
+            if filtered_occupation_data.empty:
                 return px.bar()
 
             fig2 = px.bar(
-                filtered_df.head(5),
+                filtered_occupation_data.head(5),
                 x = "Category",
                 y = "Median Purchasing Power",
                 title = "Purchasing Power by Spending Category",
@@ -213,55 +311,124 @@ class App:
                 height = 400
             )
             return fig2
-
-        # update page 3
+        
+        # Callback to generate job cards and layout
         @self.app.callback(
-            [
-                Output("technical-skills-chart", "figure"),
-                Output("soft-skills-chart", "figure"),
-                Output("experience-chart", "figure"),
-                Output("output-page3", "children")
-            ],
+            Output("output-page3", "children"),
             Input("search-button", "n_clicks"),
             State("occupation-dropdown3", "value"),
             State("location-input", "value"),
+            State("resume-upload", "contents"),
             prevent_initial_call=True
         )
-        def update_page3(n_clicks, occupation, location):
-            import pandas as pd
-            import plotly.express as px
 
-            df_jobs, top_skills = get_job_insights(occupation, location)
+        def update_page3(n_clicks, occupation, location, resume_contents):
+            if not resume_contents:
+                return "Please upload a resume."
 
-            if df_jobs.empty or not top_skills:
-                empty_fig = px.bar(title="No jobs found.")
-                return empty_fig, empty_fig, empty_fig, html.Div("No job postings found.")
+            resume_text = extract_resume_text_from_base64(resume_contents)
+            job_data = extract_job_info(fetch_jobs(occupation, location))
+            matches = get_matches(resume_text, job_data)
 
-            def make_chart(skill_list, title):
-                skill_df = pd.DataFrame(skill_list, columns=["Skill", "Appearances"])
-                return px.bar(skill_df, x="Skill", y="Appearances", title=title)
-
-            tech_fig = make_chart(top_skills["technical_skills"], "Top Technical Skills")
-            soft_fig = make_chart(top_skills["soft_skills"], "Top Soft Skills")
-            exp_fig = make_chart(top_skills["experience_education"], "Experience / Education")
-
-            # Extract top entries
-            top_tech = top_skills["technical_skills"][0][0] if top_skills["technical_skills"] else "N/A"
-            top_soft = top_skills["soft_skills"][0][0] if top_skills["soft_skills"] else "N/A"
-            top_exp = top_skills["experience_education"][0][0] if top_skills["experience_education"] else "N/A"
-
-            summary_card = dbc.Card([
-                dbc.CardBody([
-                    html.H4("Job Market Insights", className="card-title"),
-                    html.P(f"🔍 Found {len(df_jobs)} job postings for **{occupation}** in **{location}** in the past week."),
-                    html.Hr(),
-                    html.P(["📌 Most requested technical skill: ", dbc.Badge(top_tech, color="info", className="ms-1")]),
-                    html.P(["🧠 Top soft skill employers seek: ", dbc.Badge(top_soft, color="success", className="ms-1")]),
-                    html.P(["🎓 Common experience/education level: ", dbc.Badge(top_exp, color="warning", className="ms-1")]),
+            if not matches:
+                return html.Div([
+                    html.H5("No job matches found.", style={"color": "red"})
                 ])
-            ], className="shadow-sm")
 
-            return tech_fig, soft_fig, exp_fig, summary_card
+            top_matches = list(matches.items())[:8]
+
+            # Job Cards
+            job_cards = [
+                html.Div([
+                    html.H5(job_data.loc[job_id, 'title'], style={"marginBottom": "5px"}),
+                    html.P(job_data.loc[job_id, 'employer']),
+                    html.P(f"{round(match_rating * 100)}% match"),
+                    html.A("View Job Posting", href=job_data.loc[job_id, 'apply_link'], target="_blank", style={"color": "#007BFF"})
+                ],
+                id={'type': 'job-card', 'index': job_id},
+                n_clicks=0,
+                style={
+                    "border": "1px solid #ccc",
+                    "borderRadius": "10px",
+                    "padding": "15px",
+                    "marginBottom": "15px",
+                    "boxShadow": "0 2px 5px rgba(0,0,0,0.1)",
+                    "backgroundColor": "#fafafa",
+                    "cursor": "pointer"
+                })
+                for job_id, match_rating in top_matches
+            ]
+
+            return dbc.Container([
+                dbc.Row([
+                    dbc.Col([
+                        html.H5(f"🔍 Found {len(job_data)} jobs in the past week!", className="mb-3"),
+                        html.H5("🎯 Your top 8 matches:", className="mb-4"),
+                        html.Div(job_cards),
+                        dcc.Store(id='job-data-store', data=job_data.to_dict()),
+                        dcc.Store(id='match-data-store', data=dict(top_matches))
+                    ], width=4),
+                    dbc.Col([
+                        html.Div(id = "insight-display")
+                    ], width=4)
+                ], justify="center", className="mt-4")
+            ], fluid=True)
+
+        # Callback to display insights
+        @self.app.callback(
+            Output("insight-display", "children"),
+            Input({'type': 'job-card', 'index': ALL}, 'n_clicks'),
+            State("job-data-store", "data"),
+            State("match-data-store", "data"),
+            prevent_initial_call=True
+        )
+
+        def display_insight(n_clicks_list, job_data_dict, match_data_dict):
+            if not any(n_clicks_list):
+                raise PreventUpdate
+
+            clicked_index = next(i for i, n in enumerate(n_clicks_list) if n)
+            job_data = pd.DataFrame.from_dict(job_data_dict)
+            top_matches = list(match_data_dict.items())
+            job_id = top_matches[clicked_index][0]
+
+            # Get insights for that job
+            raw_insights = get_insights(job_data.loc[job_id, "title"], job_data.loc[job_id, "description"])
+            
+            try:
+                insights = json.loads(raw_insights)
+            except json.JSONDecodeError:
+                return html.Div("Sorry, couldn't parse insights.")
+            
+            def render_list(items):
+                if isinstance(items, list):
+                    return html.Ul([html.Li(item) for item in items])
+                else:
+                    return html.P(items or "N/A")
+            
+            # Then update your Card layout
+            return dbc.Card([
+                dbc.CardHeader("🧠 Job Breakdown"),
+                dbc.CardBody([
+                    html.H6("Main Responsibilities"),
+                    render_list(insights.get("main_responsibilities")),
+
+                    html.H6("Preferred Qualifications"),
+                    render_list(insights.get("preferred_qualifications")),
+
+                    html.H6("Key Skills"),
+                    render_list(insights.get("key_skills")),
+
+                    html.H6("Time Commitment & Deadlines"),
+                    render_list(insights.get("time_commitment_deadlines")),
+
+                    html.H6("Salary & Benefits"),
+                    render_list(insights.get("salary_benefits", "N/A")),
+
+                    html.H6("Risk of Automation"),
+                    html.P(insights.get("automation_risk", "N/A"))
+                ])
+            ], className="shadow-sm mt-3", style={"borderRadius": "12px"})
             
     def start(self):
         self.app.run(debug = True)
