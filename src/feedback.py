@@ -20,16 +20,22 @@ def get_feedback(resume_text, job_title, job_description):
     Here is my resume:
     Resume: {resume_text}
 
-    Please answer the following:
-    1. How well does this resume match the job description? 
-    2. Highlight key skills, experiences, or qualifications in the resume that make me a good fit for this job.
-    3. Point out any potential gaps or areas where I might need to improve to increase my chances for this role.
-    4. Overall, would you recommend I apply for this job? Why or why not?
+    Please answer the following and respond *strictly* in valid JSON, formatted exactly as follows:
+    {{
+    "How well does this resume match the job description?": ["<bullet point 1>", "<bullet point 2>", "..."],
+    "Highlight key skills, experiences, or qualifications in the resume that make me a good fit for this job.": ["<bullet point 1>", "<bullet point 2>", "..."],
+    "Point out any potential gaps or areas where I might need to improve to increase my chances for this role.": ["<bullet point 1>", "<bullet point 2>", "..."],
+    "Overall, would you recommend I apply for this job? Why or why not?": ["<bullet point 1>", "<bullet point 2>", "..."]
+    }}
 
-    Provide a detailed answer that gives context around why this job would be a good or bad fit for me, based on the provided details.
+    Provide comprehensive bullet points for each question, giving context around why this job would be a good or bad fit for me, based on the provided details.
+    Do not include any introduction or markdown-respond with only valid JSON.
     """
 
     return get_response(prompt)
+
+def get_followup_feedback(chat_history):
+    return get_response(chat_history)
 
 def get_insights(job_title, job_description):
     prompt = f"""
@@ -54,10 +60,15 @@ def get_insights(job_title, job_description):
     return get_response(prompt)
 
 def get_response(prompt):
+    if isinstance(prompt, list):
+        messages = prompt
+    else:
+        messages = [{"role": "user", "content": prompt}]
+
     response = openai.chat.completions.create(
-        model="gpt-4",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.7
+        model="gpt-4o-mini",
+        messages=messages,
+        temperature=0.3
     )
 
     summary = response.choices[0].message.content

@@ -3,12 +3,13 @@ import plotly.express as px
 import dash_bootstrap_components as dbc
 import json
 import pandas as pd
+import asyncio
 from dash import html, dcc
 from dash import Input, Output, State
 from dash.dependencies import ALL
-from fetch import fetch_jobs, extract_job_info
+from fetch import main, extract_job_info
 from match import extract_resume_text_from_base64, get_matches
-from feedback import get_feedback, get_insights
+from feedback import get_feedback, get_insights, get_followup_feedback
 from dash.exceptions import PreventUpdate
 
 class App:
@@ -61,6 +62,7 @@ class App:
         # Main layout (URL tracker and page content placeholder)
         self.app.layout = html.Div([
             dcc.Location(id='url', refresh=False),
+            dcc.Store(id = "resume-text-store"),
             navbar,
             content
         ])
@@ -216,7 +218,7 @@ class App:
                         html.Label("📄 Upload Your Resume (PDF)", className="form-label"),
                         dcc.Upload(
                             id="resume-upload",
-                            children=html.Div([
+                            children=html.Div(id = "upload-box-content", children = [
                                 "Drag and drop or ",
                                 html.A("select a PDF file")
                             ]),
@@ -232,18 +234,12 @@ class App:
                             },
                             multiple=False,
                             accept=".pdf"
-                        )
+                        ),
                     ], width=12)
                 ], className="my-2"),
-            ], style={"maxWidth": "900px", "margin": "0 auto"}),  # center the search bar block
-        
-        # Loading spinner + output display
-        dcc.Loading(
-            id="loading-spinner",
-            type="circle",
-            children=html.Div(id="output-page3", className="mb-4")
-        )
-    ])
+            ], style={"maxWidth": "900px", "margin": "0 auto"}),
+            html.Div(id = "output-page3", className = "mb-4")
+        ])
 
     def define_callbacks(self):
 
@@ -312,22 +308,38 @@ class App:
             )
             return fig2
         
+        # store resume text
+        @self.app.callback(
+            Output("upload-box-content", "children"),
+            Output('resume-text-store', 'data'),
+            Input('resume-upload', 'contents'),
+            prevent_initial_call=True
+        )
+
+        def cache_resume_text(resume_contents):
+            if not resume_contents:
+                return dash.no_update
+            return (
+                html.Span("✅ Resume uploaded and read"), 
+                extract_resume_text_from_base64(resume_contents)
+            )
+
         # Callback to generate job cards and layout
         @self.app.callback(
             Output("output-page3", "children"),
             Input("search-button", "n_clicks"),
             State("occupation-dropdown3", "value"),
             State("location-input", "value"),
-            State("resume-upload", "contents"),
+            State("resume-text-store", "data"),
             prevent_initial_call=True
         )
 
-        def update_page3(n_clicks, occupation, location, resume_contents):
-            if not resume_contents:
+        def update_page3(n_clicks, occupation, location, resume_text):
+            if not resume_text:
                 return "Please upload a resume."
-
-            resume_text = extract_resume_text_from_base64(resume_contents)
-            job_data = extract_job_info(fetch_jobs(occupation, location))
+            
+            asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+            job_data = extract_job_info(asyncio.run(main(occupation, location)))
             matches = get_matches(resume_text, job_data)
 
             if not matches:
@@ -366,24 +378,43 @@ class App:
                         html.H5("🎯 Your top 8 matches:", className="mb-4"),
                         html.Div(job_cards),
                         dcc.Store(id='job-data-store', data=job_data.to_dict()),
-                        dcc.Store(id='match-data-store', data=dict(top_matches))
-                    ], width=4),
+                        dcc.Store(id='match-data-store', data=dict(top_matches)),
+                        dcc.Store(id = "chat-store", data = [])
+                    ], width=5),
+                    # Loading spinner + output display
                     dbc.Col([
-                        html.Div(id = "insight-display")
-                    ], width=4)
-                ], justify="center", className="mt-4")
+                        dbc.RadioItems(
+                            id="insight-toggle",
+                            options=[
+                                {"label": "🧠 Job Breakdown", "value": "breakdown"},
+                                {"label": "💬 Resume Advisor", "value": "chatbot"},
+                            ],
+                            value="breakdown",
+                            inline=True,
+                            className="mb-2"
+                        ),
+                        dcc.Loading(
+                            id="loading-spinner",
+                            type="circle",
+                            children = html.Div(id = "insight-display")
+                        )
+                    ], width = 5)
+                ], justify = "center", className="mt-4")
             ], fluid=True)
 
         # Callback to display insights
         @self.app.callback(
             Output("insight-display", "children"),
             Input({'type': 'job-card', 'index': ALL}, 'n_clicks'),
+            Input("insight-toggle", "value"),
+            State("resume-text-store", "data"),
             State("job-data-store", "data"),
             State("match-data-store", "data"),
+            State("chat-store", "data"),
             prevent_initial_call=True
         )
 
-        def display_insight(n_clicks_list, job_data_dict, match_data_dict):
+        def display_insight(n_clicks_list, toggle_value, resume_text, job_data_dict, match_data_dict, chat_data):
             if not any(n_clicks_list):
                 raise PreventUpdate
 
@@ -392,9 +423,38 @@ class App:
             top_matches = list(match_data_dict.items())
             job_id = top_matches[clicked_index][0]
 
+            # chat option
+            if toggle_value == "chatbot":
+                if not chat_data:
+                    resume_feedback = get_feedback(resume_text, job_data.loc[job_id, "title"], job_data.loc[job_id, "description"])
+                    print(resume_feedback)
+                    feedback_obj = json.loads(resume_feedback)
+                    pretty_feedback = json.dumps(feedback_obj, indent=2)
+                    chat_data = [{"role": "assistant", "content": pretty_feedback}]
+
+                messages = html.Div([
+                    html.Div(msg["content"],
+                        style={
+                            "backgroundColor": "#d1e7dd" if msg["role"] == "assistant" else "#ffffff",
+                            "padding": "8px", "marginBottom": "5px", "borderRadius": "8px"
+                        }
+                    ) for msg in chat_data
+                ], style={"maxHeight": "300px", "overflowY": "auto"})
+
+                return html.Div([
+                    dbc.Card([
+                        dbc.CardHeader("💬 Resume Advisor"),
+                        dbc.CardBody([
+                            messages,
+                            dbc.Input(id="chat-input", type="text", placeholder="Ask a follow-up...", className="mt-2"),
+                            dbc.Button("Send", id="chat-send", className="mt-2")
+                        ])
+                    ])
+                ])
+
             # Get insights for that job
             raw_insights = get_insights(job_data.loc[job_id, "title"], job_data.loc[job_id, "description"])
-            
+            print(raw_insights)
             try:
                 insights = json.loads(raw_insights)
             except json.JSONDecodeError:
@@ -429,6 +489,23 @@ class App:
                     html.P(insights.get("automation_risk", "N/A"))
                 ])
             ], className="shadow-sm mt-3", style={"borderRadius": "12px"})
-            
+        
+        @self.app.callback(
+            Output("chat-store", "data"),
+            Input("chat-send", "n_clicks"),
+            State("chat-input", "value"),
+            State("chat-store", "data"),
+            prevent_initial_call=True
+        )
+
+        def update_chat(n_clicks, user_input, chat_history):
+            if not user_input:
+                raise PreventUpdate
+
+            chat_history.append({"role": "user", "content": user_input})
+            ai_reply = get_followup_feedback(chat_history)
+            chat_history.append({"role": "assistant", "content": ai_reply})
+            return chat_history
+
     def start(self):
         self.app.run(debug = True)
