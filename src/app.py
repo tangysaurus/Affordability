@@ -11,6 +11,7 @@ from fetch_data import main, extract_job_info
 from job_match import extract_resume_text_from_base64, get_matches
 from llm_prompt import get_feedback, get_insights
 from dash.exceptions import PreventUpdate
+from purchasing_power import run
 
 class App:
     def __init__(self, occupation_data):
@@ -25,11 +26,6 @@ class App:
         # Top Navbar layout
         navbar = dbc.Navbar(
             dbc.Container([
-                # Adding Font Awesome Icon via CDN link
-                # html.Link(
-                #     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css", 
-                #     rel="stylesheet"
-                # ),
                 dbc.Row([
                     dbc.Col(
                         html.H2(
@@ -493,3 +489,7 @@ class App:
 
     def start(self):
         self.app.run(debug = True)
+
+occupation_data = run()
+dashboard = App(occupation_data)
+server = dashboard.app.server
