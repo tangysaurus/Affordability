@@ -34,9 +34,6 @@ def get_feedback(resume_text, job_title, job_description):
 
     return get_response(prompt)
 
-def get_followup_feedback(chat_history):
-    return get_response(chat_history)
-
 def get_insights(job_title, job_description):
     prompt = f"""
     You are an expert career coach. Analyze the following job description and respond *strictly* in valid JSON, formatted exactly as follows:
@@ -56,21 +53,14 @@ def get_insights(job_title, job_description):
     Job Title: {job_title}
     Job Description: {job_description}
     """
-
+    
     return get_response(prompt)
 
 def get_response(prompt):
-    if isinstance(prompt, list):
-        messages = prompt
-    else:
-        messages = [{"role": "user", "content": prompt}]
-
     response = openai.chat.completions.create(
         model="gpt-4o-mini",
-        messages=messages,
+        messages=[{"role": "user", "content": prompt}],
         temperature=0.3
     )
-
-    summary = response.choices[0].message.content
-    return summary
+    return response.choices[0].message.content
 

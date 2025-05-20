@@ -1,0 +1,726 @@
+﻿index,GeoFIPS,GeoName,Occupation Title,Total Employment,Employment Per 1000 Jobs,Location Quotient,Job Openings in Last Month
+118095,41860,"San Francisco-Oakland-Fremont, CA",All Occupations,2405740,1000,1,254
+118096,41860,"San Francisco-Oakland-Fremont, CA",Management Occupations,233270,96.96,1.36,30
+118097,41860,"San Francisco-Oakland-Fremont, CA",Chief Executives,6170,2.57,1.87,12
+118098,41860,"San Francisco-Oakland-Fremont, CA",General and Operations Managers,42330,17.6,0.76,94
+118099,41860,"San Francisco-Oakland-Fremont, CA",Legislators,270,0.11,0.65,6
+118100,41860,"San Francisco-Oakland-Fremont, CA",Advertising and Promotions Managers,460,0.19,1.41,81
+118101,41860,"San Francisco-Oakland-Fremont, CA",Marketing Managers,12820,5.33,2.13,185
+118102,41860,"San Francisco-Oakland-Fremont, CA",Sales Managers,17890,7.44,1.9,116
+118103,41860,"San Francisco-Oakland-Fremont, CA",Public Relations Managers,2040,0.85,1.72,85
+118104,41860,"San Francisco-Oakland-Fremont, CA",Fundraising Managers,1230,0.51,2.13,15
+118105,41860,"San Francisco-Oakland-Fremont, CA",Administrative Services Managers,5380,2.24,1.36,10
+118106,41860,"San Francisco-Oakland-Fremont, CA",Facilities Managers,3180,1.32,1.44,28
+118107,41860,"San Francisco-Oakland-Fremont, CA",Computer and Information Systems Managers,26640,11.07,2.64,4
+118108,41860,"San Francisco-Oakland-Fremont, CA",Financial Managers,18380,7.64,1.44,56
+118109,41860,"San Francisco-Oakland-Fremont, CA",Industrial Production Managers,3190,1.33,0.87,2
+118110,41860,"San Francisco-Oakland-Fremont, CA",Purchasing Managers,1190,0.5,0.94,36
+118111,41860,"San Francisco-Oakland-Fremont, CA","Transportation, Storage, and Distribution Managers",4070,1.69,1.22,35
+118112,41860,"San Francisco-Oakland-Fremont, CA",Compensation and Benefits Managers,610,0.25,1.93,6
+118113,41860,"San Francisco-Oakland-Fremont, CA",Human Resources Managers,5890,2.45,1.75,71
+118114,41860,"San Francisco-Oakland-Fremont, CA",Training and Development Managers,1090,0.46,1.56,8
+118115,41860,"San Francisco-Oakland-Fremont, CA","Farmers, Ranchers, and Other Agricultural Managers",40,0.02,0.47,0
+118116,41860,"San Francisco-Oakland-Fremont, CA",Construction Managers,5660,2.35,1.04,96
+118117,41860,"San Francisco-Oakland-Fremont, CA","Education and Childcare Administrators, Preschool and Daycare",1490,0.62,1.34,15
+118118,41860,"San Francisco-Oakland-Fremont, CA","Education Administrators, Kindergarten through Secondary",4060,1.69,0.81,2
+118119,41860,"San Francisco-Oakland-Fremont, CA","Education Administrators, Postsecondary",1790,0.75,0.65,1
+118120,41860,"San Francisco-Oakland-Fremont, CA","Education Administrators, All Other",1740,0.73,2.1,5
+118121,41860,"San Francisco-Oakland-Fremont, CA",Architectural and Engineering Managers,6380,2.65,1.95,29
+118122,41860,"San Francisco-Oakland-Fremont, CA",Food Service Managers,5480,2.28,1.44,35
+118123,41860,"San Francisco-Oakland-Fremont, CA",Gambling Managers,30,0.01,0.47,3
+118124,41860,"San Francisco-Oakland-Fremont, CA","Entertainment and Recreation Managers, Except Gambling",1270,0.53,2.22,0
+118125,41860,"San Francisco-Oakland-Fremont, CA",Lodging Managers,540,0.22,0.83,15
+118126,41860,"San Francisco-Oakland-Fremont, CA",Medical and Health Services Managers,11210,4.66,1.27,44
+118127,41860,"San Francisco-Oakland-Fremont, CA",Natural Sciences Managers,5160,2.14,3.28,0
+118128,41860,"San Francisco-Oakland-Fremont, CA",Postmasters and Mail Superintendents,80,0.03,0.35,0
+118129,41860,"San Francisco-Oakland-Fremont, CA","Property, Real Estate, and Community Association Managers",7120,2.96,1.54,9
+118130,41860,"San Francisco-Oakland-Fremont, CA",Social and Community Service Managers,4860,2.02,1.59,6
+118131,41860,"San Francisco-Oakland-Fremont, CA",Emergency Management Directors,150,0.06,0.77,6
+118132,41860,"San Francisco-Oakland-Fremont, CA",Funeral Home Managers,60,0.03,0.31,4
+118133,41860,"San Francisco-Oakland-Fremont, CA","Personal Service Managers, All Other",310,0.13,1.88,1
+118134,41860,"San Francisco-Oakland-Fremont, CA","Managers, All Other",22980,9.55,2.33,10
+118135,41860,"San Francisco-Oakland-Fremont, CA",Business and Financial Operations Occupations,215400,89.54,1.33,4
+118136,41860,"San Francisco-Oakland-Fremont, CA","Agents and Business Managers of Artists, Performers, and Athletes",290,0.12,1.29,0
+118137,41860,"San Francisco-Oakland-Fremont, CA",Buyers and Purchasing Agents,6160,2.56,0.81,21
+118138,41860,"San Francisco-Oakland-Fremont, CA","Claims Adjusters, Examiners, and Investigators",3040,1.26,0.64,0
+118139,41860,"San Francisco-Oakland-Fremont, CA",Compliance Officers,7350,3.06,1.18,28
+118140,41860,"San Francisco-Oakland-Fremont, CA",Cost Estimators,3520,1.46,1.03,38
+118141,41860,"San Francisco-Oakland-Fremont, CA",Human Resources Specialists,18080,7.52,1.26,16
+118142,41860,"San Francisco-Oakland-Fremont, CA",Labor Relations Specialists,2110,0.88,2.09,11
+118143,41860,"San Francisco-Oakland-Fremont, CA",Logisticians,4950,2.06,1.35,42
+118144,41860,"San Francisco-Oakland-Fremont, CA",Project Management Specialists,21650,9,1.38,156
+118145,41860,"San Francisco-Oakland-Fremont, CA",Management Analysts,24790,10.31,1.78,81
+118146,41860,"San Francisco-Oakland-Fremont, CA","Meeting, Convention, and Event Planners",3130,1.3,1.49,12
+118147,41860,"San Francisco-Oakland-Fremont, CA",Fundraisers,2150,0.9,1.3,19
+118148,41860,"San Francisco-Oakland-Fremont, CA","Compensation, Benefits, and Job Analysis Specialists",2630,1.09,1.64,1
+118149,41860,"San Francisco-Oakland-Fremont, CA",Training and Development Specialists,7080,2.94,1.04,10
+118150,41860,"San Francisco-Oakland-Fremont, CA",Market Research Analysts and Marketing Specialists,23560,9.79,1.75,12
+118151,41860,"San Francisco-Oakland-Fremont, CA","Business Operations Specialists, All Other",26700,11.1,1.52,28
+118152,41860,"San Francisco-Oakland-Fremont, CA",Accountants and Auditors,26600,11.06,1.18,36
+118153,41860,"San Francisco-Oakland-Fremont, CA",Property Appraisers and Assessors,640,0.27,0.7,8
+118154,41860,"San Francisco-Oakland-Fremont, CA",Budget Analysts,510,0.21,0.69,13
+118155,41860,"San Francisco-Oakland-Fremont, CA",Credit Analysts,1090,0.45,1.03,58
+118156,41860,"San Francisco-Oakland-Fremont, CA",Financial and Investment Analysts,9580,3.98,1.8,164
+118157,41860,"San Francisco-Oakland-Fremont, CA",Personal Financial Advisors,8830,3.67,2.09,22
+118158,41860,"San Francisco-Oakland-Fremont, CA",Insurance Underwriters,1050,0.44,0.62,5
+118159,41860,"San Francisco-Oakland-Fremont, CA",Financial Risk Specialists,920,0.38,1.04,28
+118160,41860,"San Francisco-Oakland-Fremont, CA",Financial Examiners,900,0.38,0.92,5
+118161,41860,"San Francisco-Oakland-Fremont, CA",Credit Counselors,270,0.11,0.62,3
+118162,41860,"San Francisco-Oakland-Fremont, CA",Loan Officers,3090,1.28,0.68,22
+118163,41860,"San Francisco-Oakland-Fremont, CA","Tax Examiners and Collectors, and Revenue Agents",410,0.17,0.49,0
+118164,41860,"San Francisco-Oakland-Fremont, CA",Tax Preparers,1590,0.66,1.39,110
+118165,41860,"San Francisco-Oakland-Fremont, CA","Financial Specialists, All Other",2720,1.13,1.37,10
+118166,41860,"San Francisco-Oakland-Fremont, CA",Computer and Mathematical Occupations,173380,72.07,2.14,0
+118167,41860,"San Francisco-Oakland-Fremont, CA",Computer Systems Analysts,10950,4.55,1.41,12
+118168,41860,"San Francisco-Oakland-Fremont, CA",Information Security Analysts,4010,1.67,1.43,45
+118169,41860,"San Francisco-Oakland-Fremont, CA",Computer and Information Research Scientists,1860,0.77,3.09,2
+118170,41860,"San Francisco-Oakland-Fremont, CA",Computer Network Support Specialists,1930,0.8,0.84,15
+118171,41860,"San Francisco-Oakland-Fremont, CA",Computer User Support Specialists,9720,4.04,0.89,14
+118172,41860,"San Francisco-Oakland-Fremont, CA",Computer Network Architects,5340,2.22,1.94,8
+118173,41860,"San Francisco-Oakland-Fremont, CA",Database Administrators,1860,0.77,1.63,27
+118174,41860,"San Francisco-Oakland-Fremont, CA",Database Architects,1540,0.64,1.52,27
+118175,41860,"San Francisco-Oakland-Fremont, CA",Network and Computer Systems Administrators,5370,2.23,1.08,20
+118176,41860,"San Francisco-Oakland-Fremont, CA",Computer Programmers,3780,1.57,2.2,59
+118177,41860,"San Francisco-Oakland-Fremont, CA",Software Developers,76900,31.96,2.98,222
+118178,41860,"San Francisco-Oakland-Fremont, CA",Software Quality Assurance Analysts and Testers,7910,3.29,2.54,20
+118179,41860,"San Francisco-Oakland-Fremont, CA",Web Developers,2730,1.13,2.22,31
+118180,41860,"San Francisco-Oakland-Fremont, CA",Web and Digital Interface Designers,7930,3.3,4.56,10
+118181,41860,"San Francisco-Oakland-Fremont, CA","Computer Occupations, All Other",18680,7.77,2.73,0
+118182,41860,"San Francisco-Oakland-Fremont, CA",Actuaries,210,0.09,0.47,14
+118183,41860,"San Francisco-Oakland-Fremont, CA",Operations Research Analysts,2350,0.98,1.4,8
+118184,41860,"San Francisco-Oakland-Fremont, CA",Statisticians,830,0.35,1.78,17
+118185,41860,"San Francisco-Oakland-Fremont, CA",Data Scientists,9350,3.89,2.57,114
+118186,41860,"San Francisco-Oakland-Fremont, CA","Mathematical Science Occupations, All Other",130,0.05,1.8,9
+118187,41860,"San Francisco-Oakland-Fremont, CA",Architecture and Engineering Occupations,52610,21.87,1.31,38
+118188,41860,"San Francisco-Oakland-Fremont, CA","Architects, Except Landscape and Naval",3430,1.43,1.98,0
+118189,41860,"San Francisco-Oakland-Fremont, CA",Landscape Architects,720,0.3,2.36,14
+118190,41860,"San Francisco-Oakland-Fremont, CA",Cartographers and Photogrammetrists,170,0.07,0.84,0
+118191,41860,"San Francisco-Oakland-Fremont, CA",Surveyors,520,0.22,0.63,27
+118192,41860,"San Francisco-Oakland-Fremont, CA",Aerospace Engineers,210,0.09,0.2,10
+118193,41860,"San Francisco-Oakland-Fremont, CA",Bioengineers and Biomedical Engineers,620,0.26,1.83,8
+118194,41860,"San Francisco-Oakland-Fremont, CA",Chemical Engineers,370,0.15,1.16,29
+118195,41860,"San Francisco-Oakland-Fremont, CA",Civil Engineers,9920,4.12,1.79,116
+118196,41860,"San Francisco-Oakland-Fremont, CA",Computer Hardware Engineers,5090,2.12,4.31,23
+118197,41860,"San Francisco-Oakland-Fremont, CA",Electrical Engineers,2860,1.19,0.97,145
+118198,41860,"San Francisco-Oakland-Fremont, CA","Electronics Engineers, Except Computer",1610,0.67,1.1,2
+118199,41860,"San Francisco-Oakland-Fremont, CA",Environmental Engineers,580,0.24,0.98,43
+118200,41860,"San Francisco-Oakland-Fremont, CA","Health and Safety Engineers, Except Mining Safety Engineers and Inspectors",570,0.24,1.57,0
+118201,41860,"San Francisco-Oakland-Fremont, CA",Industrial Engineers,4630,1.93,0.85,31
+118202,41860,"San Francisco-Oakland-Fremont, CA",Marine Engineers and Naval Architects,50,0.02,0.42,1
+118203,41860,"San Francisco-Oakland-Fremont, CA",Materials Engineers,420,0.18,1.19,32
+118204,41860,"San Francisco-Oakland-Fremont, CA",Mechanical Engineers,4670,1.94,1.04,77
+118205,41860,"San Francisco-Oakland-Fremont, CA","Mining and Geological Engineers, Including Mining Safety Engineers",50,0.02,0.47,0
+118206,41860,"San Francisco-Oakland-Fremont, CA",Petroleum Engineers,280,0.12,0.94,3
+118207,41860,"San Francisco-Oakland-Fremont, CA","Engineers, All Other",5060,2.1,2.15,156
+118208,41860,"San Francisco-Oakland-Fremont, CA",Architectural and Civil Drafters,2470,1.03,1.44,2
+118209,41860,"San Francisco-Oakland-Fremont, CA",Electrical and Electronics Drafters,330,0.14,1.05,0
+118210,41860,"San Francisco-Oakland-Fremont, CA",Mechanical Drafters,550,0.23,0.88,10
+118211,41860,"San Francisco-Oakland-Fremont, CA","Drafters, All Other",300,0.12,1.19,4
+118212,41860,"San Francisco-Oakland-Fremont, CA",Civil Engineering Technologists and Technicians,1050,0.44,1.08,3
+118213,41860,"San Francisco-Oakland-Fremont, CA",Electrical and Electronic Engineering Technologists and Technicians,1400,0.58,0.97,5
+118214,41860,"San Francisco-Oakland-Fremont, CA",Electro-Mechanical and Mechatronics Technologists and Technicians,350,0.14,1.51,0
+118215,41860,"San Francisco-Oakland-Fremont, CA",Environmental Engineering Technologists and Technicians,190,0.08,0.97,4
+118216,41860,"San Francisco-Oakland-Fremont, CA",Industrial Engineering Technologists and Technicians,730,0.3,0.64,11
+118217,41860,"San Francisco-Oakland-Fremont, CA",Mechanical Engineering Technologists and Technicians,670,0.28,1.15,11
+118218,41860,"San Francisco-Oakland-Fremont, CA",Calibration Technologists and Technicians,240,0.1,1.02,8
+118219,41860,"San Francisco-Oakland-Fremont, CA","Engineering Technologists and Technicians, Except Drafters, All Other",1440,0.6,1.44,0
+118220,41860,"San Francisco-Oakland-Fremont, CA",Surveying and Mapping Technicians,480,0.2,0.54,3
+118221,41860,"San Francisco-Oakland-Fremont, CA","Life, Physical, and Social Science Occupations",44030,18.3,1.95,0
+118222,41860,"San Francisco-Oakland-Fremont, CA",Food Scientists and Technologists,360,0.15,1.62,4
+118223,41860,"San Francisco-Oakland-Fremont, CA",Soil and Plant Scientists,210,0.09,0.81,1
+118224,41860,"San Francisco-Oakland-Fremont, CA",Biochemists and Biophysicists,1940,0.81,3.6,11
+118225,41860,"San Francisco-Oakland-Fremont, CA",Microbiologists,870,0.36,2.83,18
+118226,41860,"San Francisco-Oakland-Fremont, CA",Zoologists and Wildlife Biologists,260,0.11,1,0
+118227,41860,"San Francisco-Oakland-Fremont, CA","Biological Scientists, All Other",4320,1.8,4.64,21
+118228,41860,"San Francisco-Oakland-Fremont, CA",Conservation Scientists,370,0.15,0.92,3
+118229,41860,"San Francisco-Oakland-Fremont, CA",Foresters,60,0.03,0.42,1
+118230,41860,"San Francisco-Oakland-Fremont, CA",Epidemiologists,310,0.13,1.72,15
+118231,41860,"San Francisco-Oakland-Fremont, CA","Medical Scientists, Except Epidemiologists",6870,2.86,2.82,0
+118232,41860,"San Francisco-Oakland-Fremont, CA","Life Scientists, All Other",120,0.05,1.07,32
+118233,41860,"San Francisco-Oakland-Fremont, CA",Atmospheric and Space Scientists,70,0.03,0.55,0
+118234,41860,"San Francisco-Oakland-Fremont, CA",Chemists,2040,0.85,1.57,109
+118235,41860,"San Francisco-Oakland-Fremont, CA",Materials Scientists,160,0.07,1.21,14
+118236,41860,"San Francisco-Oakland-Fremont, CA","Environmental Scientists and Specialists, Including Health",1630,0.68,1.23,4
+118237,41860,"San Francisco-Oakland-Fremont, CA","Geoscientists, Except Hydrologists and Geographers",540,0.23,1.55,0
+118238,41860,"San Francisco-Oakland-Fremont, CA",Hydrologists,50,0.02,0.56,10
+118239,41860,"San Francisco-Oakland-Fremont, CA","Physical Scientists, All Other",760,0.32,2.15,3
+118240,41860,"San Francisco-Oakland-Fremont, CA",Economists,440,0.18,1.79,25
+118241,41860,"San Francisco-Oakland-Fremont, CA",Survey Researchers,260,0.11,2.12,15
+118242,41860,"San Francisco-Oakland-Fremont, CA",Clinical and Counseling Psychologists,2220,0.93,1.98,74
+118243,41860,"San Francisco-Oakland-Fremont, CA",School Psychologists,940,0.39,0.95,79
+118244,41860,"San Francisco-Oakland-Fremont, CA","Psychologists, All Other",410,0.17,1.48,30
+118245,41860,"San Francisco-Oakland-Fremont, CA",Sociologists,150,0.06,3.29,5
+118246,41860,"San Francisco-Oakland-Fremont, CA",Urban and Regional Planners,1290,0.54,1.92,10
+118247,41860,"San Francisco-Oakland-Fremont, CA",Anthropologists and Archeologists,90,0.04,0.7,6
+118248,41860,"San Francisco-Oakland-Fremont, CA","Social Scientists and Related Workers, All Other",360,0.15,0.63,6
+118249,41860,"San Francisco-Oakland-Fremont, CA",Agricultural Technicians,460,0.19,2.06,8
+118250,41860,"San Francisco-Oakland-Fremont, CA",Food Science Technicians,350,0.15,1.59,1
+118251,41860,"San Francisco-Oakland-Fremont, CA",Biological Technicians,3510,1.46,2.95,10
+118252,41860,"San Francisco-Oakland-Fremont, CA",Chemical Technicians,1210,0.5,1.4,10
+118253,41860,"San Francisco-Oakland-Fremont, CA","Environmental Science and Protection Technicians, Including Health",670,0.28,1.09,0
+118254,41860,"San Francisco-Oakland-Fremont, CA",Social Science Research Assistants,810,0.34,1.57,12
+118255,41860,"San Francisco-Oakland-Fremont, CA",Forest and Conservation Technicians,80,0.04,0.17,0
+118256,41860,"San Francisco-Oakland-Fremont, CA",Forensic Science Technicians,410,0.17,1.35,3
+118257,41860,"San Francisco-Oakland-Fremont, CA","Life, Physical, and Social Science Technicians, All Other",2000,0.83,1.79,0
+118258,41860,"San Francisco-Oakland-Fremont, CA",Occupational Health and Safety Specialists,1850,0.77,0.92,29
+118259,41860,"San Francisco-Oakland-Fremont, CA",Occupational Health and Safety Technicians,610,0.26,1.25,7
+118260,41860,"San Francisco-Oakland-Fremont, CA",Community and Social Service Occupations,46780,19.44,1.17,2
+118261,41860,"San Francisco-Oakland-Fremont, CA","Educational, Guidance, and Career Counselors and Advisors",5460,2.27,1.02,2
+118262,41860,"San Francisco-Oakland-Fremont, CA",Marriage and Family Therapists,3400,1.41,3.31,32
+118263,41860,"San Francisco-Oakland-Fremont, CA",Rehabilitation Counselors,1640,0.68,1.18,47
+118264,41860,"San Francisco-Oakland-Fremont, CA","Substance Abuse, Behavioral Disorder, and Mental Health Counselors",8080,3.36,1.18,10
+118265,41860,"San Francisco-Oakland-Fremont, CA","Counselors, All Other",1530,0.64,2.95,197
+118266,41860,"San Francisco-Oakland-Fremont, CA","Child, Family, and School Social Workers",5700,2.37,0.95,1
+118267,41860,"San Francisco-Oakland-Fremont, CA",Healthcare Social Workers,2730,1.13,0.94,35
+118268,41860,"San Francisco-Oakland-Fremont, CA",Mental Health and Substance Abuse Social Workers,1630,0.68,0.83,10
+118269,41860,"San Francisco-Oakland-Fremont, CA","Social Workers, All Other",820,0.34,0.81,39
+118270,41860,"San Francisco-Oakland-Fremont, CA",Health Education Specialists,2020,0.84,1.99,10
+118271,41860,"San Francisco-Oakland-Fremont, CA",Probation Officers and Correctional Treatment Specialists,800,0.33,0.59,0
+118272,41860,"San Francisco-Oakland-Fremont, CA",Social and Human Service Assistants,7540,3.13,1.14,2
+118273,41860,"San Francisco-Oakland-Fremont, CA",Community Health Workers,1770,0.74,1.87,11
+118274,41860,"San Francisco-Oakland-Fremont, CA","Community and Social Service Specialists, All Other",2110,0.88,1.22,2
+118275,41860,"San Francisco-Oakland-Fremont, CA",Clergy,870,0.36,0.96,2
+118276,41860,"San Francisco-Oakland-Fremont, CA","Directors, Religious Activities and Education",480,0.2,1.43,3
+118277,41860,"San Francisco-Oakland-Fremont, CA","Religious Workers, All Other",,,,1
+118278,41860,"San Francisco-Oakland-Fremont, CA",Legal Occupations,27490,11.43,1.38,48
+118279,41860,"San Francisco-Oakland-Fremont, CA",Lawyers,16940,7.04,1.45,162
+118280,41860,"San Francisco-Oakland-Fremont, CA",Judicial Law Clerks,180,0.08,0.89,10
+118281,41860,"San Francisco-Oakland-Fremont, CA","Arbitrators, Mediators, and Conciliators",200,0.08,1.6,0
+118282,41860,"San Francisco-Oakland-Fremont, CA",Paralegals and Legal Assistants,7670,3.19,1.34,107
+118283,41860,"San Francisco-Oakland-Fremont, CA","Title Examiners, Abstractors, and Searchers",650,0.27,0.87,0
+118284,41860,"San Francisco-Oakland-Fremont, CA","Legal Support Workers, All Other",1240,0.52,1.68,143
+118285,41860,"San Francisco-Oakland-Fremont, CA",Educational Instruction and Library Occupations,128900,53.58,0.92,10
+118286,41860,"San Francisco-Oakland-Fremont, CA","Business Teachers, Postsecondary",670,0.28,0.52,0
+118287,41860,"San Francisco-Oakland-Fremont, CA","Computer Science Teachers, Postsecondary",410,0.17,0.72,0
+118288,41860,"San Francisco-Oakland-Fremont, CA","Mathematical Science Teachers, Postsecondary",690,0.29,0.91,0
+118289,41860,"San Francisco-Oakland-Fremont, CA","Architecture Teachers, Postsecondary",160,0.07,1.15,0
+118290,41860,"San Francisco-Oakland-Fremont, CA","Engineering Teachers, Postsecondary",440,0.18,0.7,0
+118291,41860,"San Francisco-Oakland-Fremont, CA","Biological Science Teachers, Postsecondary",750,0.31,0.9,0
+118292,41860,"San Francisco-Oakland-Fremont, CA","Atmospheric, Earth, Marine, and Space Sciences Teachers, Postsecondary",240,0.1,1.34,0
+118293,41860,"San Francisco-Oakland-Fremont, CA","Chemistry Teachers, Postsecondary",260,0.11,0.83,0
+118294,41860,"San Francisco-Oakland-Fremont, CA","Environmental Science Teachers, Postsecondary",90,0.04,0.85,0
+118295,41860,"San Francisco-Oakland-Fremont, CA","Physics Teachers, Postsecondary",220,0.09,1.03,0
+118296,41860,"San Francisco-Oakland-Fremont, CA","Anthropology and Archeology Teachers, Postsecondary",160,0.07,1.93,0
+118297,41860,"San Francisco-Oakland-Fremont, CA","Area, Ethnic, and Cultural Studies Teachers, Postsecondary",150,0.06,0.86,0
+118298,41860,"San Francisco-Oakland-Fremont, CA","Economics Teachers, Postsecondary",170,0.07,0.86,0
+118299,41860,"San Francisco-Oakland-Fremont, CA","Geography Teachers, Postsecondary",50,0.02,1.02,0
+118300,41860,"San Francisco-Oakland-Fremont, CA","Political Science Teachers, Postsecondary",130,0.05,0.48,0
+118301,41860,"San Francisco-Oakland-Fremont, CA","Psychology Teachers, Postsecondary",570,0.24,0.88,0
+118302,41860,"San Francisco-Oakland-Fremont, CA","Sociology Teachers, Postsecondary",130,0.05,0.67,0
+118303,41860,"San Francisco-Oakland-Fremont, CA","Social Sciences Teachers, Postsecondary, All Other",390,0.16,1.41,0
+118304,41860,"San Francisco-Oakland-Fremont, CA","Health Specialties Teachers, Postsecondary",1360,0.57,0.38,0
+118305,41860,"San Francisco-Oakland-Fremont, CA","Nursing Instructors and Teachers, Postsecondary",730,0.3,0.63,0
+118306,41860,"San Francisco-Oakland-Fremont, CA","Education Teachers, Postsecondary",260,0.11,0.28,0
+118307,41860,"San Francisco-Oakland-Fremont, CA","Library Science Teachers, Postsecondary",70,0.03,1.09,0
+118308,41860,"San Francisco-Oakland-Fremont, CA","Criminal Justice and Law Enforcement Teachers, Postsecondary",130,0.06,0.62,0
+118309,41860,"San Francisco-Oakland-Fremont, CA","Law Teachers, Postsecondary",1260,0.53,3.55,0
+118310,41860,"San Francisco-Oakland-Fremont, CA","Art, Drama, and Music Teachers, Postsecondary",1260,0.52,0.83,0
+118311,41860,"San Francisco-Oakland-Fremont, CA","Communications Teachers, Postsecondary",350,0.15,0.77,0
+118312,41860,"San Francisco-Oakland-Fremont, CA","English Language and Literature Teachers, Postsecondary",730,0.3,0.78,0
+118313,41860,"San Francisco-Oakland-Fremont, CA","Foreign Language and Literature Teachers, Postsecondary",300,0.13,0.91,0
+118314,41860,"San Francisco-Oakland-Fremont, CA","History Teachers, Postsecondary",250,0.11,0.82,0
+118315,41860,"San Francisco-Oakland-Fremont, CA","Philosophy and Religion Teachers, Postsecondary",150,0.06,0.47,0
+118316,41860,"San Francisco-Oakland-Fremont, CA","Recreation and Fitness Studies Teachers, Postsecondary",230,0.1,1.18,0
+118317,41860,"San Francisco-Oakland-Fremont, CA","Career/Technical Education Teachers, Postsecondary",1310,0.55,0.76,0
+118318,41860,"San Francisco-Oakland-Fremont, CA","Postsecondary Teachers, All Other",4720,1.96,2,0
+118319,41860,"San Francisco-Oakland-Fremont, CA","Preschool Teachers, Except Special Education",9100,3.78,1.31,1
+118320,41860,"San Francisco-Oakland-Fremont, CA","Kindergarten Teachers, Except Special Education",880,0.36,0.49,4
+118321,41860,"San Francisco-Oakland-Fremont, CA","Elementary School Teachers, Except Special Education",14800,6.15,0.68,6
+118322,41860,"San Francisco-Oakland-Fremont, CA","Middle School Teachers, Except Special and Career/Technical Education",6740,2.8,0.7,2
+118323,41860,"San Francisco-Oakland-Fremont, CA","Secondary School Teachers, Except Special and Career/Technical Education",12240,5.09,0.73,3
+118324,41860,"San Francisco-Oakland-Fremont, CA","Career/Technical Education Teachers, Secondary School",240,0.1,0.15,4
+118325,41860,"San Francisco-Oakland-Fremont, CA","Special Education Teachers, Preschool",300,0.12,0.67,23
+118326,41860,"San Francisco-Oakland-Fremont, CA","Special Education Teachers, Kindergarten and Elementary School",1580,0.66,0.44,8
+118327,41860,"San Francisco-Oakland-Fremont, CA","Special Education Teachers, Middle School",770,0.32,0.52,30
+118328,41860,"San Francisco-Oakland-Fremont, CA","Special Education Teachers, Secondary School",1320,0.55,0.52,20
+118329,41860,"San Francisco-Oakland-Fremont, CA","Special Education Teachers, All Other",700,0.29,1.14,46
+118330,41860,"San Francisco-Oakland-Fremont, CA","Adult Basic Education, Adult Secondary Education, and English as a Second Language Instructors",380,0.16,0.67,0
+118331,41860,"San Francisco-Oakland-Fremont, CA",Self-Enrichment Teachers,9220,3.83,1.92,1
+118332,41860,"San Francisco-Oakland-Fremont, CA","Substitute Teachers, Short-Term",9370,3.9,1.25,8
+118333,41860,"San Francisco-Oakland-Fremont, CA",Tutors,5760,2.39,2.11,79
+118334,41860,"San Francisco-Oakland-Fremont, CA","Teachers and Instructors, All Other",3450,1.44,1.77,61
+118335,41860,"San Francisco-Oakland-Fremont, CA",Archivists,150,0.06,1.37,9
+118336,41860,"San Francisco-Oakland-Fremont, CA",Curators,210,0.09,1.09,10
+118337,41860,"San Francisco-Oakland-Fremont, CA",Museum Technicians and Conservators,470,0.2,2.32,0
+118338,41860,"San Francisco-Oakland-Fremont, CA",Librarians and Media Collections Specialists,1980,0.82,0.96,0
+118339,41860,"San Francisco-Oakland-Fremont, CA",Library Technicians,820,0.34,0.71,10
+118340,41860,"San Francisco-Oakland-Fremont, CA",Instructional Coordinators,2270,0.94,0.69,7
+118341,41860,"San Francisco-Oakland-Fremont, CA","Teaching Assistants, Postsecondary",5100,2.12,2.11,0
+118342,41860,"San Francisco-Oakland-Fremont, CA","Teaching Assistants, Except Postsecondary",17140,7.12,0.8,0
+118343,41860,"San Francisco-Oakland-Fremont, CA","Educational Instruction and Library Workers, All Other",4970,2.07,2.78,12
+118344,41860,"San Francisco-Oakland-Fremont, CA","Arts, Design, Entertainment, Sports, and Media Occupations",50900,21.16,1.55,1
+118345,41860,"San Francisco-Oakland-Fremont, CA",Art Directors,2050,0.85,2.61,31
+118346,41860,"San Francisco-Oakland-Fremont, CA",Craft Artists,40,0.02,0.57,0
+118347,41860,"San Francisco-Oakland-Fremont, CA","Fine Artists, Including Painters, Sculptors, and Illustrators",230,0.1,1.47,2
+118348,41860,"San Francisco-Oakland-Fremont, CA",Special Effects Artists and Animators,1740,0.73,5.25,5
+118349,41860,"San Francisco-Oakland-Fremont, CA","Artists and Related Workers, All Other",60,0.03,0.53,33
+118350,41860,"San Francisco-Oakland-Fremont, CA",Commercial and Industrial Designers,850,0.35,1.8,2
+118351,41860,"San Francisco-Oakland-Fremont, CA",Fashion Designers,280,0.12,0.85,21
+118352,41860,"San Francisco-Oakland-Fremont, CA",Floral Designers,540,0.23,0.87,14
+118353,41860,"San Francisco-Oakland-Fremont, CA",Graphic Designers,4050,1.68,1.21,64
+118354,41860,"San Francisco-Oakland-Fremont, CA",Interior Designers,1860,0.78,1.72,42
+118355,41860,"San Francisco-Oakland-Fremont, CA",Merchandise Displayers and Window Trimmers,1820,0.76,0.61,0
+118356,41860,"San Francisco-Oakland-Fremont, CA",Set and Exhibit Designers,290,0.12,1.74,2
+118357,41860,"San Francisco-Oakland-Fremont, CA","Designers, All Other",460,0.19,3.02,93
+118358,41860,"San Francisco-Oakland-Fremont, CA",Actors,260,0.11,0.44,15
+118359,41860,"San Francisco-Oakland-Fremont, CA",Producers and Directors,4850,2.01,2.14,4
+118360,41860,"San Francisco-Oakland-Fremont, CA",Athletes and Sports Competitors,120,0.05,0.51,0
+118361,41860,"San Francisco-Oakland-Fremont, CA",Coaches and Scouts,5520,2.29,1.41,0
+118362,41860,"San Francisco-Oakland-Fremont, CA","Umpires, Referees, and Other Sports Officials",480,0.2,2.05,0
+118363,41860,"San Francisco-Oakland-Fremont, CA",Dancers,640,0.27,4.56,24
+118364,41860,"San Francisco-Oakland-Fremont, CA",Choreographers,190,0.08,3.54,2
+118365,41860,"San Francisco-Oakland-Fremont, CA",Music Directors and Composers,480,0.2,2.52,0
+118366,41860,"San Francisco-Oakland-Fremont, CA",Musicians and Singers,1010,0.42,1.69,35
+118367,41860,"San Francisco-Oakland-Fremont, CA","Disc Jockeys, Except Radio",260,0.11,2.02,1
+118368,41860,"San Francisco-Oakland-Fremont, CA","Entertainers and Performers, Sports and Related Workers, All Other",200,0.08,0.86,1
+118369,41860,"San Francisco-Oakland-Fremont, CA",Broadcast Announcers and Radio Disc Jockeys,380,0.16,1.01,1
+118370,41860,"San Francisco-Oakland-Fremont, CA","News Analysts, Reporters, and Journalists",1180,0.49,1.82,10
+118371,41860,"San Francisco-Oakland-Fremont, CA",Public Relations Specialists,6040,2.51,1.38,18
+118372,41860,"San Francisco-Oakland-Fremont, CA",Editors,2350,0.98,1.57,60
+118373,41860,"San Francisco-Oakland-Fremont, CA",Technical Writers,1240,0.52,1.43,57
+118374,41860,"San Francisco-Oakland-Fremont, CA",Writers and Authors,1330,0.55,1.78,100
+118375,41860,"San Francisco-Oakland-Fremont, CA",Interpreters and Translators,840,0.35,1.01,37
+118376,41860,"San Francisco-Oakland-Fremont, CA",Court Reporters and Simultaneous Captioners,310,0.13,1.55,1
+118377,41860,"San Francisco-Oakland-Fremont, CA","Media and Communication Workers, All Other",2840,1.18,7.72,10
+118378,41860,"San Francisco-Oakland-Fremont, CA",Audio and Video Technicians,1890,0.79,1.73,47
+118379,41860,"San Francisco-Oakland-Fremont, CA",Broadcast Technicians,460,0.19,1.41,8
+118380,41860,"San Francisco-Oakland-Fremont, CA",Sound Engineering Technicians,340,0.14,1.66,9
+118381,41860,"San Francisco-Oakland-Fremont, CA",Lighting Technicians,240,0.1,1.49,12
+118382,41860,"San Francisco-Oakland-Fremont, CA",Photographers,980,0.41,1.23,46
+118383,41860,"San Francisco-Oakland-Fremont, CA","Camera Operators, Television, Video, and Film",760,0.32,2,0
+118384,41860,"San Francisco-Oakland-Fremont, CA",Film and Video Editors,1020,0.43,2.27,15
+118385,41860,"San Francisco-Oakland-Fremont, CA","Media and Communication Equipment Workers, All Other",410,0.17,2.04,0
+118386,41860,"San Francisco-Oakland-Fremont, CA",Healthcare Practitioners and Technical Occupations,119500,49.67,0.8,0
+118387,41860,"San Francisco-Oakland-Fremont, CA",Chiropractors,,,,10
+118388,41860,"San Francisco-Oakland-Fremont, CA","Dentists, General",1680,0.7,0.95,140
+118389,41860,"San Francisco-Oakland-Fremont, CA",Dietitians and Nutritionists,1550,0.65,1.3,44
+118390,41860,"San Francisco-Oakland-Fremont, CA",Optometrists,980,0.41,1.5,46
+118391,41860,"San Francisco-Oakland-Fremont, CA",Pharmacists,4230,1.76,0.83,133
+118392,41860,"San Francisco-Oakland-Fremont, CA",Physician Assistants,1980,0.82,0.82,87
+118393,41860,"San Francisco-Oakland-Fremont, CA",Podiatrists,100,0.04,0.66,18
+118394,41860,"San Francisco-Oakland-Fremont, CA",Occupational Therapists,1510,0.63,0.63,211
+118395,41860,"San Francisco-Oakland-Fremont, CA",Physical Therapists,3170,1.32,0.82,211
+118396,41860,"San Francisco-Oakland-Fremont, CA",Radiation Therapists,190,0.08,0.64,28
+118397,41860,"San Francisco-Oakland-Fremont, CA",Recreational Therapists,150,0.06,0.65,15
+118398,41860,"San Francisco-Oakland-Fremont, CA",Respiratory Therapists,1940,0.81,0.91,84
+118399,41860,"San Francisco-Oakland-Fremont, CA",Speech-Language Pathologists,1930,0.8,0.69,205
+118400,41860,"San Francisco-Oakland-Fremont, CA",Exercise Physiologists,30,0.01,0.25,9
+118401,41860,"San Francisco-Oakland-Fremont, CA","Therapists, All Other",340,0.14,1.11,98
+118402,41860,"San Francisco-Oakland-Fremont, CA",Veterinarians,1220,0.51,0.97,90
+118403,41860,"San Francisco-Oakland-Fremont, CA",Registered Nurses,40750,16.94,0.8,329
+118404,41860,"San Francisco-Oakland-Fremont, CA",Nurse Midwives,200,0.08,1.55,11
+118405,41860,"San Francisco-Oakland-Fremont, CA",Nurse Practitioners,2960,1.23,0.62,172
+118406,41860,"San Francisco-Oakland-Fremont, CA",Audiologists,200,0.08,0.87,19
+118407,41860,"San Francisco-Oakland-Fremont, CA",Family Medicine Physicians,3080,1.28,1.83,88
+118408,41860,"San Francisco-Oakland-Fremont, CA",General Internal Medicine Physicians,,,,16
+118409,41860,"San Francisco-Oakland-Fremont, CA","Pediatricians, General",,,,157
+118410,41860,"San Francisco-Oakland-Fremont, CA",Psychiatrists,510,0.21,1.32,114
+118411,41860,"San Francisco-Oakland-Fremont, CA","Physicians, All Other",2340,0.97,0.47,115
+118412,41860,"San Francisco-Oakland-Fremont, CA","Ophthalmologists, Except Pediatric",210,0.09,1.1,4
+118413,41860,"San Francisco-Oakland-Fremont, CA","Orthopedic Surgeons, Except Pediatric",,,,8
+118414,41860,"San Francisco-Oakland-Fremont, CA",Acupuncturists,340,0.14,2.56,11
+118415,41860,"San Francisco-Oakland-Fremont, CA",Dental Hygienists,3100,1.29,0.91,47
+118416,41860,"San Francisco-Oakland-Fremont, CA","Healthcare Diagnosing or Treating Practitioners, All Other",300,0.13,0.63,0
+118417,41860,"San Francisco-Oakland-Fremont, CA",Clinical Laboratory Technologists and Technicians,5860,2.44,1.09,31
+118418,41860,"San Francisco-Oakland-Fremont, CA",Cardiovascular Technologists and Technicians,500,0.21,0.52,16
+118419,41860,"San Francisco-Oakland-Fremont, CA",Diagnostic Medical Sonographers,1170,0.49,0.86,142
+118420,41860,"San Francisco-Oakland-Fremont, CA",Nuclear Medicine Technologists,170,0.07,0.66,29
+118421,41860,"San Francisco-Oakland-Fremont, CA",Radiologic Technologists and Technicians,2580,1.07,0.74,81
+118422,41860,"San Francisco-Oakland-Fremont, CA",Magnetic Resonance Imaging Technologists,370,0.16,0.57,111
+118423,41860,"San Francisco-Oakland-Fremont, CA",Medical Dosimetrists,40,0.02,0.7,10
+118424,41860,"San Francisco-Oakland-Fremont, CA",Emergency Medical Technicians,3080,1.28,1.11,37
+118425,41860,"San Francisco-Oakland-Fremont, CA",Paramedics,990,0.41,0.64,61
+118426,41860,"San Francisco-Oakland-Fremont, CA",Dietetic Technicians,550,0.23,1.19,8
+118427,41860,"San Francisco-Oakland-Fremont, CA",Pharmacy Technicians,4460,1.85,0.59,72
+118428,41860,"San Francisco-Oakland-Fremont, CA",Psychiatric Technicians,750,0.31,0.35,20
+118429,41860,"San Francisco-Oakland-Fremont, CA",Surgical Technologists,1260,0.53,0.71,35
+118430,41860,"San Francisco-Oakland-Fremont, CA",Veterinary Technologists and Technicians,1220,0.51,0.6,38
+118431,41860,"San Francisco-Oakland-Fremont, CA",Ophthalmic Medical Technicians,540,0.22,0.45,10
+118432,41860,"San Francisco-Oakland-Fremont, CA",Licensed Practical and Licensed Vocational Nurses,8290,3.44,0.84,60
+118433,41860,"San Francisco-Oakland-Fremont, CA",Medical Records Specialists,2200,0.92,0.75,32
+118434,41860,"San Francisco-Oakland-Fremont, CA","Opticians, Dispensing",870,0.36,0.7,11
+118435,41860,"San Francisco-Oakland-Fremont, CA",Orthotists and Prosthetists,160,0.07,1.03,11
+118436,41860,"San Francisco-Oakland-Fremont, CA",Hearing Aid Specialists,100,0.04,0.6,33
+118437,41860,"San Francisco-Oakland-Fremont, CA","Health Technologists and Technicians, All Other",2990,1.24,1.1,3
+118438,41860,"San Francisco-Oakland-Fremont, CA",Health Information Technologists and Medical Registrars,350,0.14,0.59,0
+118439,41860,"San Francisco-Oakland-Fremont, CA",Athletic Trainers,230,0.1,0.51,11
+118440,41860,"San Francisco-Oakland-Fremont, CA",Genetic Counselors,130,0.06,2.45,10
+118441,41860,"San Francisco-Oakland-Fremont, CA","Healthcare Practitioners and Technical Workers, All Other",510,0.21,0.88,22
+118442,41860,"San Francisco-Oakland-Fremont, CA",Healthcare Support Occupations,154590,64.26,1.33,89
+118443,41860,"San Francisco-Oakland-Fremont, CA",Home Health and Personal Care Aides,109070,45.34,1.75,15
+118444,41860,"San Francisco-Oakland-Fremont, CA",Nursing Assistants,10750,4.47,0.5,91
+118445,41860,"San Francisco-Oakland-Fremont, CA",Orderlies,460,0.19,0.56,0
+118446,41860,"San Francisco-Oakland-Fremont, CA",Occupational Therapy Assistants,300,0.12,0.39,87
+118447,41860,"San Francisco-Oakland-Fremont, CA",Occupational Therapy Aides,,,,91
+118448,41860,"San Francisco-Oakland-Fremont, CA",Physical Therapist Assistants,850,0.36,0.51,142
+118449,41860,"San Francisco-Oakland-Fremont, CA",Physical Therapist Aides,790,0.33,1.16,146
+118450,41860,"San Francisco-Oakland-Fremont, CA",Massage Therapists,1680,0.7,1.12,15
+118451,41860,"San Francisco-Oakland-Fremont, CA",Dental Assistants,7100,2.95,1.21,34
+118452,41860,"San Francisco-Oakland-Fremont, CA",Medical Assistants,15130,6.29,1.22,31
+118453,41860,"San Francisco-Oakland-Fremont, CA",Medical Equipment Preparers,1120,0.47,0.99,6
+118454,41860,"San Francisco-Oakland-Fremont, CA",Medical Transcriptionists,520,0.21,0.77,9
+118455,41860,"San Francisco-Oakland-Fremont, CA",Pharmacy Aides,960,0.4,1.5,94
+118456,41860,"San Francisco-Oakland-Fremont, CA",Veterinary Assistants and Laboratory Animal Caretakers,2410,1,1.35,0
+118457,41860,"San Francisco-Oakland-Fremont, CA",Phlebotomists,1350,0.56,0.62,75
+118458,41860,"San Francisco-Oakland-Fremont, CA","Healthcare Support Workers, All Other",1930,0.8,1.19,84
+118459,41860,"San Francisco-Oakland-Fremont, CA",Protective Service Occupations,50750,21.1,0.89,4
+118460,41860,"San Francisco-Oakland-Fremont, CA",First-Line Supervisors of Correctional Officers,180,0.07,0.21,0
+118461,41860,"San Francisco-Oakland-Fremont, CA",First-Line Supervisors of Police and Detectives,1720,0.72,0.72,0
+118462,41860,"San Francisco-Oakland-Fremont, CA",First-Line Supervisors of Firefighting and Prevention Workers,850,0.35,0.58,0
+118463,41860,"San Francisco-Oakland-Fremont, CA",First-Line Supervisors of Security Workers,1260,0.52,1.15,0
+118464,41860,"San Francisco-Oakland-Fremont, CA","First-Line Supervisors of Protective Service Workers, All Other",240,0.1,0.77,0
+118465,41860,"San Francisco-Oakland-Fremont, CA",Firefighters,3410,1.42,0.66,14
+118466,41860,"San Francisco-Oakland-Fremont, CA",Fire Inspectors and Investigators,250,0.1,1.14,0
+118467,41860,"San Francisco-Oakland-Fremont, CA",Forest Fire Inspectors and Prevention Specialists,40,0.02,0.97,1
+118468,41860,"San Francisco-Oakland-Fremont, CA",Correctional Officers and Jailers,1620,0.67,0.28,0
+118469,41860,"San Francisco-Oakland-Fremont, CA",Detectives and Criminal Investigators,690,0.29,0.4,13
+118470,41860,"San Francisco-Oakland-Fremont, CA",Parking Enforcement Workers,480,0.2,3.95,17
+118471,41860,"San Francisco-Oakland-Fremont, CA",Police and Sheriff's Patrol Officers,7860,3.27,0.76,0
+118472,41860,"San Francisco-Oakland-Fremont, CA",Animal Control Workers,150,0.06,0.8,6
+118473,41860,"San Francisco-Oakland-Fremont, CA",Private Detectives and Investigators,540,0.23,0.9,17
+118474,41860,"San Francisco-Oakland-Fremont, CA",Gambling Surveillance Officers and Gambling Investigators,110,0.05,0.72,0
+118475,41860,"San Francisco-Oakland-Fremont, CA",Security Guards,25400,10.56,1.31,85
+118476,41860,"San Francisco-Oakland-Fremont, CA",Crossing Guards and Flaggers,890,0.37,0.63,0
+118477,41860,"San Francisco-Oakland-Fremont, CA","Lifeguards, Ski Patrol, and Other Recreational Protective Service Workers",2170,0.9,0.97,0
+118478,41860,"San Francisco-Oakland-Fremont, CA",Transportation Security Screeners,320,0.14,0.45,3
+118479,41860,"San Francisco-Oakland-Fremont, CA",School Bus Monitors,90,0.04,0.08,10
+118480,41860,"San Francisco-Oakland-Fremont, CA","Protective Service Workers, All Other",2410,1,1.86,13
+118481,41860,"San Francisco-Oakland-Fremont, CA",Food Preparation and Serving Related Occupations,194680,80.92,0.92,19
+118482,41860,"San Francisco-Oakland-Fremont, CA",Chefs and Head Cooks,4490,1.87,1.58,29
+118483,41860,"San Francisco-Oakland-Fremont, CA",First-Line Supervisors of Food Preparation and Serving Workers,13730,5.71,0.74,1
+118484,41860,"San Francisco-Oakland-Fremont, CA","Cooks, Fast Food",10540,4.38,1.01,15
+118485,41860,"San Francisco-Oakland-Fremont, CA","Cooks, Institution and Cafeteria",4040,1.68,0.58,0
+118486,41860,"San Francisco-Oakland-Fremont, CA","Cooks, Restaurant",22290,9.26,0.98,126
+118487,41860,"San Francisco-Oakland-Fremont, CA","Cooks, Short Order",,,,28
+118488,41860,"San Francisco-Oakland-Fremont, CA","Cooks, All Other",940,0.39,2.57,171
+118489,41860,"San Francisco-Oakland-Fremont, CA",Food Preparation Workers,12470,5.19,0.9,48
+118490,41860,"San Francisco-Oakland-Fremont, CA",Bartenders,11590,4.82,1,45
+118491,41860,"San Francisco-Oakland-Fremont, CA",Fast Food and Counter Workers,47330,19.68,0.8,2
+118492,41860,"San Francisco-Oakland-Fremont, CA",Waiters and Waitresses,30450,12.66,0.85,28
+118493,41860,"San Francisco-Oakland-Fremont, CA","Food Servers, Nonrestaurant",4440,1.85,1.05,0
+118494,41860,"San Francisco-Oakland-Fremont, CA",Dining Room and Cafeteria Attendants and Bartender Helpers,10440,4.34,1.28,1
+118495,41860,"San Francisco-Oakland-Fremont, CA",Dishwashers,8440,3.51,1.15,55
+118496,41860,"San Francisco-Oakland-Fremont, CA","Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",5090,2.11,0.76,0
+118497,41860,"San Francisco-Oakland-Fremont, CA","Food Preparation and Serving Related Workers, All Other",3670,1.53,2.62,36
+118498,41860,"San Francisco-Oakland-Fremont, CA",Building and Grounds Cleaning and Maintenance Occupations,63270,26.3,0.9,8
+118499,41860,"San Francisco-Oakland-Fremont, CA",First-Line Supervisors of Housekeeping and Janitorial Workers,2230,0.93,0.82,0
+118500,41860,"San Francisco-Oakland-Fremont, CA","First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers",1400,0.58,0.72,0
+118501,41860,"San Francisco-Oakland-Fremont, CA","Janitors and Cleaners, Except Maids and Housekeeping Cleaners",31140,12.94,0.91,1
+118502,41860,"San Francisco-Oakland-Fremont, CA",Maids and Housekeeping Cleaners,13510,5.62,1.01,28
+118503,41860,"San Francisco-Oakland-Fremont, CA","Building Cleaning Workers, All Other",400,0.17,1.58,22
+118504,41860,"San Francisco-Oakland-Fremont, CA",Pest Control Workers,1170,0.49,0.78,26
+118505,41860,"San Francisco-Oakland-Fremont, CA",Landscaping and Groundskeeping Workers,12050,5.01,0.82,14
+118506,41860,"San Francisco-Oakland-Fremont, CA","Pesticide Handlers, Sprayers, and Applicators, Vegetation",,,,0
+118507,41860,"San Francisco-Oakland-Fremont, CA",Tree Trimmers and Pruners,930,0.39,1.25,0
+118508,41860,"San Francisco-Oakland-Fremont, CA","Grounds Maintenance Workers, All Other",320,0.13,1.53,34
+118509,41860,"San Francisco-Oakland-Fremont, CA",Personal Care and Service Occupations,48760,20.27,0.99,3
+118510,41860,"San Francisco-Oakland-Fremont, CA",First-Line Supervisors of Gambling Services Workers,160,0.07,0.41,0
+118511,41860,"San Francisco-Oakland-Fremont, CA","First-Line Supervisors of Entertainment and Recreation Workers, Except Gambling Services",1680,0.7,1.16,0
+118512,41860,"San Francisco-Oakland-Fremont, CA",First-Line Supervisors of Personal Service Workers,1290,0.54,0.77,0
+118513,41860,"San Francisco-Oakland-Fremont, CA",Animal Trainers,400,0.17,1.28,10
+118514,41860,"San Francisco-Oakland-Fremont, CA",Animal Caretakers,3520,1.46,0.81,10
+118515,41860,"San Francisco-Oakland-Fremont, CA",Gambling Dealers,1260,0.52,0.97,7
+118516,41860,"San Francisco-Oakland-Fremont, CA",Gambling and Sports Book Writers and Runners,100,0.04,0.82,0
+118517,41860,"San Francisco-Oakland-Fremont, CA","Gambling Service Workers, All Other",70,0.03,0.32,0
+118518,41860,"San Francisco-Oakland-Fremont, CA","Ushers, Lobby Attendants, and Ticket Takers",1870,0.78,1,0
+118519,41860,"San Francisco-Oakland-Fremont, CA",Amusement and Recreation Attendants,5560,2.31,0.96,0
+118520,41860,"San Francisco-Oakland-Fremont, CA",Costume Attendants,,,,1
+118521,41860,"San Francisco-Oakland-Fremont, CA","Locker Room, Coatroom, and Dressing Room Attendants",210,0.09,0.88,0
+118522,41860,"San Francisco-Oakland-Fremont, CA",Embalmers,30,0.01,0.64,1
+118523,41860,"San Francisco-Oakland-Fremont, CA",Funeral Attendants,180,0.08,0.38,6
+118524,41860,"San Francisco-Oakland-Fremont, CA","Morticians, Undertakers, and Funeral Arrangers",320,0.13,0.8,2
+118525,41860,"San Francisco-Oakland-Fremont, CA","Hairdressers, Hairstylists, and Cosmetologists",3220,1.34,0.7,54
+118526,41860,"San Francisco-Oakland-Fremont, CA",Manicurists and Pedicurists,4090,1.7,1.78,4
+118527,41860,"San Francisco-Oakland-Fremont, CA",Skincare Specialists,1830,0.76,1.67,28
+118528,41860,"San Francisco-Oakland-Fremont, CA",Baggage Porters and Bellhops,530,0.22,1.08,0
+118529,41860,"San Francisco-Oakland-Fremont, CA",Concierges,520,0.22,0.76,37
+118530,41860,"San Francisco-Oakland-Fremont, CA",Tour and Travel Guides,1140,0.47,1.49,5
+118531,41860,"San Francisco-Oakland-Fremont, CA",Childcare Workers,5760,2.4,0.71,103
+118532,41860,"San Francisco-Oakland-Fremont, CA",Exercise Trainers and Group Fitness Instructors,6310,2.62,1.33,69
+118533,41860,"San Francisco-Oakland-Fremont, CA",Recreation Workers,6330,2.63,1.31,26
+118534,41860,"San Francisco-Oakland-Fremont, CA",Residential Advisors,1110,0.46,0.86,4
+118535,41860,"San Francisco-Oakland-Fremont, CA","Personal Care and Service Workers, All Other",730,0.3,0.75,0
+118536,41860,"San Francisco-Oakland-Fremont, CA",Sales and Related Occupations,177480,73.77,0.85,154
+118537,41860,"San Francisco-Oakland-Fremont, CA",First-Line Supervisors of Retail Sales Workers,11450,4.76,0.66,1
+118538,41860,"San Francisco-Oakland-Fremont, CA",First-Line Supervisors of Non-Retail Sales Workers,2460,1.02,0.72,1
+118539,41860,"San Francisco-Oakland-Fremont, CA",Cashiers,40350,16.77,0.82,85
+118540,41860,"San Francisco-Oakland-Fremont, CA",Gambling Change Persons and Booth Cashiers,60,0.02,0.17,0
+118541,41860,"San Francisco-Oakland-Fremont, CA",Counter and Rental Clerks,9030,3.75,1.45,0
+118542,41860,"San Francisco-Oakland-Fremont, CA",Parts Salespersons,2290,0.95,0.55,17
+118543,41860,"San Francisco-Oakland-Fremont, CA",Retail Salespersons,37380,15.54,0.63,41
+118544,41860,"San Francisco-Oakland-Fremont, CA",Advertising Sales Agents,1230,0.51,0.81,15
+118545,41860,"San Francisco-Oakland-Fremont, CA",Insurance Sales Agents,5380,2.24,0.73,27
+118546,41860,"San Francisco-Oakland-Fremont, CA","Securities, Commodities, and Financial Services Sales Agents",10310,4.29,1.4,0
+118547,41860,"San Francisco-Oakland-Fremont, CA",Travel Agents,810,0.34,0.88,14
+118548,41860,"San Francisco-Oakland-Fremont, CA","Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",26820,11.15,1.45,0
+118549,41860,"San Francisco-Oakland-Fremont, CA","Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",3840,1.6,0.84,0
+118550,41860,"San Francisco-Oakland-Fremont, CA","Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",14150,5.88,0.72,0
+118551,41860,"San Francisco-Oakland-Fremont, CA",Demonstrators and Product Promoters,1720,0.71,1.7,0
+118552,41860,"San Francisco-Oakland-Fremont, CA",Real Estate Brokers,,,,60
+118553,41860,"San Francisco-Oakland-Fremont, CA",Real Estate Sales Agents,4040,1.68,1.36,31
+118554,41860,"San Francisco-Oakland-Fremont, CA",Sales Engineers,1430,0.6,1.62,37
+118555,41860,"San Francisco-Oakland-Fremont, CA",Telemarketers,280,0.12,0.27,4
+118556,41860,"San Francisco-Oakland-Fremont, CA","Sales and Related Workers, All Other",3910,1.63,2.53,113
+118557,41860,"San Francisco-Oakland-Fremont, CA",Office and Administrative Support Occupations,233430,97.03,0.82,37
+118558,41860,"San Francisco-Oakland-Fremont, CA",First-Line Supervisors of Office and Administrative Support Workers,19640,8.16,0.84,0
+118559,41860,"San Francisco-Oakland-Fremont, CA","Switchboard Operators, Including Answering Service",870,0.36,1.56,0
+118560,41860,"San Francisco-Oakland-Fremont, CA",Bill and Account Collectors,1670,0.69,0.65,3
+118561,41860,"San Francisco-Oakland-Fremont, CA",Billing and Posting Clerks,4930,2.05,0.76,16
+118562,41860,"San Francisco-Oakland-Fremont, CA","Bookkeeping, Accounting, and Auditing Clerks",17670,7.34,0.78,1
+118563,41860,"San Francisco-Oakland-Fremont, CA",Gambling Cage Workers,80,0.04,0.4,1
+118564,41860,"San Francisco-Oakland-Fremont, CA",Payroll and Timekeeping Clerks,2590,1.08,1.06,0
+118565,41860,"San Francisco-Oakland-Fremont, CA",Procurement Clerks,570,0.24,0.61,0
+118566,41860,"San Francisco-Oakland-Fremont, CA",Tellers,2880,1.2,0.54,20
+118567,41860,"San Francisco-Oakland-Fremont, CA","Financial Clerks, All Other",470,0.2,0.81,8
+118568,41860,"San Francisco-Oakland-Fremont, CA",Brokerage Clerks,900,0.38,1.44,0
+118569,41860,"San Francisco-Oakland-Fremont, CA",Correspondence Clerks,40,0.02,0.44,3
+118570,41860,"San Francisco-Oakland-Fremont, CA","Court, Municipal, and License Clerks",2000,0.83,0.75,0
+118571,41860,"San Francisco-Oakland-Fremont, CA","Credit Authorizers, Checkers, and Clerks",50,0.02,0.28,0
+118572,41860,"San Francisco-Oakland-Fremont, CA",Customer Service Representatives,21690,9.02,0.51,17
+118573,41860,"San Francisco-Oakland-Fremont, CA","Eligibility Interviewers, Government Programs",2770,1.15,1.13,0
+118574,41860,"San Francisco-Oakland-Fremont, CA",File Clerks,1230,0.51,1,12
+118575,41860,"San Francisco-Oakland-Fremont, CA","Hotel, Motel, and Resort Desk Clerks",3400,1.41,0.83,8
+118576,41860,"San Francisco-Oakland-Fremont, CA","Interviewers, Except Eligibility and Loan",2840,1.18,1.16,0
+118577,41860,"San Francisco-Oakland-Fremont, CA","Library Assistants, Clerical",1670,0.69,1.33,1
+118578,41860,"San Francisco-Oakland-Fremont, CA",Loan Interviewers and Clerks,1810,0.75,0.67,0
+118579,41860,"San Francisco-Oakland-Fremont, CA",New Accounts Clerks,,,,8
+118580,41860,"San Francisco-Oakland-Fremont, CA",Order Clerks,1460,0.61,1.12,29
+118581,41860,"San Francisco-Oakland-Fremont, CA","Human Resources Assistants, Except Payroll and Timekeeping",1520,0.63,1.05,0
+118582,41860,"San Francisco-Oakland-Fremont, CA",Receptionists and Information Clerks,10000,4.16,0.66,12
+118583,41860,"San Francisco-Oakland-Fremont, CA",Reservation and Transportation Ticket Agents and Travel Clerks,2800,1.16,1.41,0
+118584,41860,"San Francisco-Oakland-Fremont, CA","Information and Record Clerks, All Other",2240,0.93,1,50
+118585,41860,"San Francisco-Oakland-Fremont, CA",Cargo and Freight Agents,1520,0.63,1,28
+118586,41860,"San Francisco-Oakland-Fremont, CA",Couriers and Messengers,1190,0.5,1.06,6
+118587,41860,"San Francisco-Oakland-Fremont, CA",Public Safety Telecommunicators,1130,0.47,0.71,16
+118588,41860,"San Francisco-Oakland-Fremont, CA","Dispatchers, Except Police, Fire, and Ambulance",2910,1.21,0.88,2
+118589,41860,"San Francisco-Oakland-Fremont, CA","Meter Readers, Utilities",160,0.07,0.52,6
+118590,41860,"San Francisco-Oakland-Fremont, CA",Postal Service Clerks,860,0.36,0.71,6
+118591,41860,"San Francisco-Oakland-Fremont, CA",Postal Service Mail Carriers,4750,1.98,0.91,10
+118592,41860,"San Francisco-Oakland-Fremont, CA","Postal Service Mail Sorters, Processors, and Processing Machine Operators",1720,0.72,0.99,0
+118593,41860,"San Francisco-Oakland-Fremont, CA","Production, Planning, and Expediting Clerks",6620,2.75,1.1,0
+118594,41860,"San Francisco-Oakland-Fremont, CA","Shipping, Receiving, and Inventory Clerks",9410,3.91,0.7,16
+118595,41860,"San Francisco-Oakland-Fremont, CA","Weighers, Measurers, Checkers, and Samplers, Recordkeeping",760,0.32,0.99,0
+118596,41860,"San Francisco-Oakland-Fremont, CA",Executive Secretaries and Executive Administrative Assistants,11920,4.95,1.62,110
+118597,41860,"San Francisco-Oakland-Fremont, CA",Legal Secretaries and Administrative Assistants,2810,1.17,1.17,45
+118598,41860,"San Francisco-Oakland-Fremont, CA",Medical Secretaries and Administrative Assistants,14000,5.82,1.08,4
+118599,41860,"San Francisco-Oakland-Fremont, CA","Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",20460,8.5,0.75,1
+118600,41860,"San Francisco-Oakland-Fremont, CA",Data Entry Keyers,1600,0.66,0.76,28
+118601,41860,"San Francisco-Oakland-Fremont, CA",Word Processors and Typists,430,0.18,0.77,1
+118602,41860,"San Francisco-Oakland-Fremont, CA",Desktop Publishers,60,0.02,0.93,0
+118603,41860,"San Francisco-Oakland-Fremont, CA",Insurance Claims and Policy Processing Clerks,2740,1.14,0.77,0
+118604,41860,"San Francisco-Oakland-Fremont, CA","Mail Clerks and Mail Machine Operators, Except Postal Service",590,0.25,0.61,0
+118605,41860,"San Francisco-Oakland-Fremont, CA","Office Clerks, General",35750,14.86,0.91,18
+118606,41860,"San Francisco-Oakland-Fremont, CA","Office Machine Operators, Except Computer",330,0.14,0.86,0
+118607,41860,"San Francisco-Oakland-Fremont, CA",Proofreaders and Copy Markers,70,0.03,0.85,0
+118608,41860,"San Francisco-Oakland-Fremont, CA",Statistical Assistants,30,0.01,0.36,8
+118609,41860,"San Francisco-Oakland-Fremont, CA","Office and Administrative Support Workers, All Other",3650,1.52,1.2,39
+118610,41860,"San Francisco-Oakland-Fremont, CA","Farming, Fishing, and Forestry Occupations",2040,0.85,0.3,0
+118611,41860,"San Francisco-Oakland-Fremont, CA","First-Line Supervisors of Farming, Fishing, and Forestry Workers",190,0.08,0.4,0
+118612,41860,"San Francisco-Oakland-Fremont, CA",Agricultural Inspectors,40,0.02,0.19,4
+118613,41860,"San Francisco-Oakland-Fremont, CA",Animal Breeders,,,,10
+118614,41860,"San Francisco-Oakland-Fremont, CA","Graders and Sorters, Agricultural Products",130,0.06,0.32,0
+118615,41860,"San Francisco-Oakland-Fremont, CA","Farmworkers and Laborers, Crop, Nursery, and Greenhouse",980,0.41,0.24,0
+118616,41860,"San Francisco-Oakland-Fremont, CA","Farmworkers, Farm, Ranch, and Aquacultural Animals",320,0.13,0.58,0
+118617,41860,"San Francisco-Oakland-Fremont, CA","Agricultural Workers, All Other",80,0.03,1.07,12
+118618,41860,"San Francisco-Oakland-Fremont, CA",Construction and Extraction Occupations,88370,36.73,0.89,0
+118619,41860,"San Francisco-Oakland-Fremont, CA",First-Line Supervisors of Construction Trades and Extraction Workers,10110,4.2,0.8,0
+118620,41860,"San Francisco-Oakland-Fremont, CA",Boilermakers,50,0.02,0.31,0
+118621,41860,"San Francisco-Oakland-Fremont, CA",Brickmasons and Blockmasons,360,0.15,0.43,0
+118622,41860,"San Francisco-Oakland-Fremont, CA",Carpenters,14360,5.97,1.32,31
+118623,41860,"San Francisco-Oakland-Fremont, CA",Carpet Installers,380,0.16,1.63,1
+118624,41860,"San Francisco-Oakland-Fremont, CA","Floor Layers, Except Carpet, Wood, and Hard Tiles",880,0.37,2.28,0
+118625,41860,"San Francisco-Oakland-Fremont, CA",Tile and Stone Setters,890,0.37,1.48,0
+118626,41860,"San Francisco-Oakland-Fremont, CA",Cement Masons and Concrete Finishers,2740,1.14,0.86,1
+118627,41860,"San Francisco-Oakland-Fremont, CA",Construction Laborers,11290,4.69,0.68,15
+118628,41860,"San Francisco-Oakland-Fremont, CA","Paving, Surfacing, and Tamping Equipment Operators",340,0.14,0.47,0
+118629,41860,"San Francisco-Oakland-Fremont, CA",Pile Driver Operators,130,0.05,2.69,0
+118630,41860,"San Francisco-Oakland-Fremont, CA",Operating Engineers and Other Construction Equipment Operators,4560,1.89,0.62,0
+118631,41860,"San Francisco-Oakland-Fremont, CA",Drywall and Ceiling Tile Installers,2920,1.21,2.25,0
+118632,41860,"San Francisco-Oakland-Fremont, CA",Tapers,350,0.15,1.82,0
+118633,41860,"San Francisco-Oakland-Fremont, CA",Electricians,9520,3.96,0.82,39
+118634,41860,"San Francisco-Oakland-Fremont, CA",Glaziers,1200,0.5,1.35,3
+118635,41860,"San Francisco-Oakland-Fremont, CA","Insulation Workers, Mechanical",190,0.08,0.48,1
+118636,41860,"San Francisco-Oakland-Fremont, CA","Painters, Construction and Maintenance",5920,2.46,1.69,1
+118637,41860,"San Francisco-Oakland-Fremont, CA",Paperhangers,,,,0
+118638,41860,"San Francisco-Oakland-Fremont, CA","Plumbers, Pipefitters, and Steamfitters",7090,2.95,1,0
+118639,41860,"San Francisco-Oakland-Fremont, CA",Plasterers and Stucco Masons,700,0.29,2.14,0
+118640,41860,"San Francisco-Oakland-Fremont, CA",Reinforcing Iron and Rebar Workers,130,0.06,0.6,0
+118641,41860,"San Francisco-Oakland-Fremont, CA",Roofers,2330,0.97,1.09,15
+118642,41860,"San Francisco-Oakland-Fremont, CA",Sheet Metal Workers,1020,0.42,0.55,5
+118643,41860,"San Francisco-Oakland-Fremont, CA",Structural Iron and Steel Workers,610,0.25,0.6,1
+118644,41860,"San Francisco-Oakland-Fremont, CA",Solar Photovoltaic Installers,1140,0.47,2.58,35
+118645,41860,"San Francisco-Oakland-Fremont, CA","Helpers--Brickmasons, Blockmasons, Stonemasons, and Tile and Marble Setters",420,0.18,1.74,0
+118646,41860,"San Francisco-Oakland-Fremont, CA",Helpers--Carpenters,,,,16
+118647,41860,"San Francisco-Oakland-Fremont, CA",Helpers--Electricians,,,,28
+118648,41860,"San Francisco-Oakland-Fremont, CA","Helpers--Painters, Paperhangers, Plasterers, and Stucco Masons",200,0.08,1.76,0
+118649,41860,"San Francisco-Oakland-Fremont, CA","Helpers--Pipelayers, Plumbers, Pipefitters, and Steamfitters",270,0.11,0.4,0
+118650,41860,"San Francisco-Oakland-Fremont, CA",Helpers--Roofers,140,0.06,1.7,10
+118651,41860,"San Francisco-Oakland-Fremont, CA","Helpers, Construction Trades, All Other",330,0.14,0.83,1
+118652,41860,"San Francisco-Oakland-Fremont, CA",Construction and Building Inspectors,2430,1.01,1.13,28
+118653,41860,"San Francisco-Oakland-Fremont, CA",Elevator and Escalator Installers and Repairers,390,0.16,1.07,1
+118654,41860,"San Francisco-Oakland-Fremont, CA",Fence Erectors,400,0.17,1.15,2
+118655,41860,"San Francisco-Oakland-Fremont, CA",Hazardous Materials Removal Workers,1470,0.61,1.86,0
+118656,41860,"San Francisco-Oakland-Fremont, CA",Highway Maintenance Workers,1030,0.43,0.44,15
+118657,41860,"San Francisco-Oakland-Fremont, CA",Septic Tank Servicers and Sewer Pipe Cleaners,360,0.15,0.78,0
+118658,41860,"San Francisco-Oakland-Fremont, CA",Miscellaneous Construction and Related Workers,490,0.21,0.94,0
+118659,41860,"San Francisco-Oakland-Fremont, CA","Excavating and Loading Machine and Dragline Operators, Surface Mining",80,0.04,0.16,0
+118660,41860,"San Francisco-Oakland-Fremont, CA","Earth Drillers, Except Oil and Gas",110,0.04,0.39,0
+118661,41860,"San Francisco-Oakland-Fremont, CA","Installation, Maintenance, and Repair Occupations",62000,25.77,0.66,43
+118662,41860,"San Francisco-Oakland-Fremont, CA","First-Line Supervisors of Mechanics, Installers, and Repairers",6250,2.6,0.67,0
+118663,41860,"San Francisco-Oakland-Fremont, CA","Computer, Automated Teller, and Office Machine Repairers",950,0.39,0.83,0
+118664,41860,"San Francisco-Oakland-Fremont, CA","Radio, Cellular, and Tower Equipment Installers and Repairers",80,0.03,0.42,0
+118665,41860,"San Francisco-Oakland-Fremont, CA","Telecommunications Equipment Installers and Repairers, Except Line Installers",2070,0.86,0.86,0
+118666,41860,"San Francisco-Oakland-Fremont, CA",Avionics Technicians,70,0.03,0.2,19
+118667,41860,"San Francisco-Oakland-Fremont, CA","Electric Motor, Power Tool, and Related Repairers",170,0.07,0.65,0
+118668,41860,"San Francisco-Oakland-Fremont, CA","Electrical and Electronics Installers and Repairers, Transportation Equipment",300,0.12,2.62,1
+118669,41860,"San Francisco-Oakland-Fremont, CA","Electrical and Electronics Repairers, Commercial and Industrial Equipment",510,0.21,0.54,5
+118670,41860,"San Francisco-Oakland-Fremont, CA","Electrical and Electronics Repairers, Powerhouse, Substation, and Relay",140,0.06,0.38,0
+118671,41860,"San Francisco-Oakland-Fremont, CA","Electronic Equipment Installers and Repairers, Motor Vehicles",150,0.06,0.97,32
+118672,41860,"San Francisco-Oakland-Fremont, CA",Audiovisual Equipment Installers and Repairers,800,0.33,2.3,16
+118673,41860,"San Francisco-Oakland-Fremont, CA",Security and Fire Alarm Systems Installers,920,0.38,0.73,13
+118674,41860,"San Francisco-Oakland-Fremont, CA",Aircraft Mechanics and Service Technicians,1030,0.43,0.48,19
+118675,41860,"San Francisco-Oakland-Fremont, CA",Automotive Body and Related Repairers,2450,1.02,1.01,37
+118676,41860,"San Francisco-Oakland-Fremont, CA",Automotive Service Technicians and Mechanics,7620,3.17,0.71,86
+118677,41860,"San Francisco-Oakland-Fremont, CA",Bus and Truck Mechanics and Diesel Engine Specialists,1780,0.74,0.4,0
+118678,41860,"San Francisco-Oakland-Fremont, CA",Farm Equipment Mechanics and Service Technicians,160,0.07,0.27,1
+118679,41860,"San Francisco-Oakland-Fremont, CA","Mobile Heavy Equipment Mechanics, Except Engines",2520,1.05,0.89,5
+118680,41860,"San Francisco-Oakland-Fremont, CA",Motorboat Mechanics and Service Technicians,170,0.07,0.44,0
+118681,41860,"San Francisco-Oakland-Fremont, CA",Motorcycle Mechanics,110,0.05,0.51,1
+118682,41860,"San Francisco-Oakland-Fremont, CA",Outdoor Power Equipment and Other Small Engine Mechanics,180,0.08,0.34,1
+118683,41860,"San Francisco-Oakland-Fremont, CA",Bicycle Repairers,360,0.15,1.85,8
+118684,41860,"San Francisco-Oakland-Fremont, CA",Tire Repairers and Changers,1010,0.42,0.61,14
+118685,41860,"San Francisco-Oakland-Fremont, CA","Control and Valve Installers and Repairers, Except Mechanical Door",540,0.23,0.74,0
+118686,41860,"San Francisco-Oakland-Fremont, CA","Heating, Air Conditioning, and Refrigeration Mechanics and Installers",3610,1.5,0.58,41
+118687,41860,"San Francisco-Oakland-Fremont, CA",Home Appliance Repairers,260,0.11,0.52,10
+118688,41860,"San Francisco-Oakland-Fremont, CA",Industrial Machinery Mechanics,2650,1.1,0.4,10
+118689,41860,"San Francisco-Oakland-Fremont, CA","Maintenance Workers, Machinery",280,0.12,0.32,11
+118690,41860,"San Francisco-Oakland-Fremont, CA",Millwrights,410,0.17,0.64,2
+118691,41860,"San Francisco-Oakland-Fremont, CA",Electrical Power-Line Installers and Repairers,750,0.31,0.39,1
+118692,41860,"San Francisco-Oakland-Fremont, CA",Telecommunications Line Installers and Repairers,1210,0.5,0.79,0
+118693,41860,"San Francisco-Oakland-Fremont, CA",Medical Equipment Repairers,670,0.28,0.71,18
+118694,41860,"San Francisco-Oakland-Fremont, CA","Precision Instrument and Equipment Repairers, All Other",130,0.05,0.85,0
+118695,41860,"San Francisco-Oakland-Fremont, CA","Maintenance and Repair Workers, General",15870,6.6,0.66,2
+118696,41860,"San Francisco-Oakland-Fremont, CA","Coin, Vending, and Amusement Machine Servicers and Repairers",430,0.18,0.98,0
+118697,41860,"San Francisco-Oakland-Fremont, CA",Locksmiths and Safe Repairers,290,0.12,1.18,0
+118698,41860,"San Francisco-Oakland-Fremont, CA",Riggers,200,0.08,0.53,8
+118699,41860,"San Francisco-Oakland-Fremont, CA","Helpers--Installation, Maintenance, and Repair Workers",1010,0.42,0.66,30
+118700,41860,"San Francisco-Oakland-Fremont, CA","Installation, Maintenance, and Repair Workers, All Other",3110,1.29,1.08,33
+118701,41860,"San Francisco-Oakland-Fremont, CA",Production Occupations,81980,34.08,0.6,10
+118702,41860,"San Francisco-Oakland-Fremont, CA",First-Line Supervisors of Production and Operating Workers,5080,2.11,0.47,1
+118703,41860,"San Francisco-Oakland-Fremont, CA","Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",40,0.02,0.07,0
+118704,41860,"San Francisco-Oakland-Fremont, CA","Electrical, Electronic, and Electromechanical Assemblers, Except Coil Winders, Tapers, and Finishers",5090,2.12,1.25,0
+118705,41860,"San Francisco-Oakland-Fremont, CA",Structural Metal Fabricators and Fitters,200,0.08,0.24,0
+118706,41860,"San Francisco-Oakland-Fremont, CA",Fiberglass Laminators and Fabricators,,,,0
+118707,41860,"San Francisco-Oakland-Fremont, CA",Miscellaneous Assemblers and Fabricators,14950,6.21,0.66,0
+118708,41860,"San Francisco-Oakland-Fremont, CA",Bakers,5360,2.23,1.48,45
+118709,41860,"San Francisco-Oakland-Fremont, CA",Butchers and Meat Cutters,3010,1.25,1.38,12
+118710,41860,"San Francisco-Oakland-Fremont, CA","Meat, Poultry, and Fish Cutters and Trimmers",690,0.29,0.31,0
+118711,41860,"San Francisco-Oakland-Fremont, CA",Slaughterers and Meat Packers,150,0.06,0.14,0
+118712,41860,"San Francisco-Oakland-Fremont, CA","Food and Tobacco Roasting, Baking, and Drying Machine Operators and Tenders",120,0.05,0.4,0
+118713,41860,"San Francisco-Oakland-Fremont, CA",Food Batchmakers,1720,0.72,0.64,0
+118714,41860,"San Francisco-Oakland-Fremont, CA",Food Cooking Machine Operators and Tenders,350,0.15,0.81,0
+118715,41860,"San Francisco-Oakland-Fremont, CA","Food Processing Workers, All Other",830,0.35,0.92,10
+118716,41860,"San Francisco-Oakland-Fremont, CA","Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic",320,0.14,0.32,0
+118717,41860,"San Francisco-Oakland-Fremont, CA","Forging Machine Setters, Operators, and Tenders, Metal and Plastic",40,0.02,0.32,0
+118718,41860,"San Francisco-Oakland-Fremont, CA","Rolling Machine Setters, Operators, and Tenders, Metal and Plastic",70,0.03,0.21,0
+118719,41860,"San Francisco-Oakland-Fremont, CA","Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic",540,0.22,0.2,0
+118720,41860,"San Francisco-Oakland-Fremont, CA","Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic",570,0.24,0.52,0
+118721,41860,"San Francisco-Oakland-Fremont, CA","Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic",190,0.08,0.64,0
+118722,41860,"San Francisco-Oakland-Fremont, CA","Milling and Planing Machine Setters, Operators, and Tenders, Metal and Plastic",160,0.07,0.75,0
+118723,41860,"San Francisco-Oakland-Fremont, CA",Machinists,2000,0.83,0.43,30
+118724,41860,"San Francisco-Oakland-Fremont, CA",Metal-Refining Furnace Operators and Tenders,60,0.03,0.19,0
+118725,41860,"San Francisco-Oakland-Fremont, CA","Model Makers, Metal and Plastic",110,0.04,2.11,0
+118726,41860,"San Francisco-Oakland-Fremont, CA","Molding, Coremaking, and Casting Machine Setters, Operators, and Tenders, Metal and Plastic",670,0.28,0.28,0
+118727,41860,"San Francisco-Oakland-Fremont, CA","Multiple Machine Tool Setters, Operators, and Tenders, Metal and Plastic",280,0.12,0.14,0
+118728,41860,"San Francisco-Oakland-Fremont, CA",Tool and Die Makers,90,0.04,0.11,1
+118729,41860,"San Francisco-Oakland-Fremont, CA","Welders, Cutters, Solderers, and Brazers",1940,0.81,0.29,0
+118730,41860,"San Francisco-Oakland-Fremont, CA","Welding, Soldering, and Brazing Machine Setters, Operators, and Tenders",320,0.13,0.56,0
+118731,41860,"San Francisco-Oakland-Fremont, CA","Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic",50,0.02,0.23,0
+118732,41860,"San Francisco-Oakland-Fremont, CA","Plating Machine Setters, Operators, and Tenders, Metal and Plastic",450,0.19,0.91,0
+118733,41860,"San Francisco-Oakland-Fremont, CA","Tool Grinders, Filers, and Sharpeners",,,,0
+118734,41860,"San Francisco-Oakland-Fremont, CA","Metal Workers and Plastic Workers, All Other",300,0.13,0.96,0
+118735,41860,"San Francisco-Oakland-Fremont, CA",Prepress Technicians and Workers,220,0.09,0.61,2
+118736,41860,"San Francisco-Oakland-Fremont, CA",Printing Press Operators,1130,0.47,0.5,6
+118737,41860,"San Francisco-Oakland-Fremont, CA",Print Binding and Finishing Workers,150,0.06,0.26,0
+118738,41860,"San Francisco-Oakland-Fremont, CA",Laundry and Dry-Cleaning Workers,2480,1.03,0.81,6
+118739,41860,"San Francisco-Oakland-Fremont, CA","Pressers, Textile, Garment, and Related Materials",580,0.24,1.38,0
+118740,41860,"San Francisco-Oakland-Fremont, CA",Sewing Machine Operators,970,0.4,0.57,1
+118741,41860,"San Francisco-Oakland-Fremont, CA","Tailors, Dressmakers, and Custom Sewers",180,0.07,0.69,0
+118742,41860,"San Francisco-Oakland-Fremont, CA",Fabric and Apparel Patternmakers,30,0.01,0.74,0
+118743,41860,"San Francisco-Oakland-Fremont, CA",Upholsterers,170,0.07,0.52,4
+118744,41860,"San Francisco-Oakland-Fremont, CA","Textile, Apparel, and Furnishings Workers, All Other",90,0.04,0.39,0
+118745,41860,"San Francisco-Oakland-Fremont, CA",Cabinetmakers and Bench Carpenters,760,0.32,0.61,0
+118746,41860,"San Francisco-Oakland-Fremont, CA",Furniture Finishers,100,0.04,0.43,10
+118747,41860,"San Francisco-Oakland-Fremont, CA","Woodworking Machine Setters, Operators, and Tenders, Except Sawing",190,0.08,0.19,0
+118748,41860,"San Francisco-Oakland-Fremont, CA",Power Plant Operators,290,0.12,0.61,8
+118749,41860,"San Francisco-Oakland-Fremont, CA",Stationary Engineers and Boiler Operators,1290,0.54,2.68,8
+118750,41860,"San Francisco-Oakland-Fremont, CA",Water and Wastewater Treatment Plant and System Operators,1160,0.48,0.59,10
+118751,41860,"San Francisco-Oakland-Fremont, CA",Chemical Plant and System Operators,250,0.11,0.91,0
+118752,41860,"San Francisco-Oakland-Fremont, CA","Petroleum Pump System Operators, Refinery Operators, and Gaugers",1010,0.42,1.85,0
+118753,41860,"San Francisco-Oakland-Fremont, CA","Plant and System Operators, All Other",270,0.11,1.09,3
+118754,41860,"San Francisco-Oakland-Fremont, CA",Chemical Equipment Operators and Tenders,750,0.31,0.38,0
+118755,41860,"San Francisco-Oakland-Fremont, CA","Separating, Filtering, Clarifying, Precipitating, and Still Machine Setters, Operators, and Tenders",680,0.28,0.8,0
+118756,41860,"San Francisco-Oakland-Fremont, CA","Crushing, Grinding, and Polishing Machine Setters, Operators, and Tenders",180,0.08,0.41,0
+118757,41860,"San Francisco-Oakland-Fremont, CA","Grinding and Polishing Workers, Hand",170,0.07,0.91,0
+118758,41860,"San Francisco-Oakland-Fremont, CA","Mixing and Blending Machine Setters, Operators, and Tenders",630,0.26,0.4,0
+118759,41860,"San Francisco-Oakland-Fremont, CA","Cutters and Trimmers, Hand",40,0.02,0.37,0
+118760,41860,"San Francisco-Oakland-Fremont, CA","Cutting and Slicing Machine Setters, Operators, and Tenders",250,0.11,0.34,0
+118761,41860,"San Francisco-Oakland-Fremont, CA","Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders",270,0.11,0.3,0
+118762,41860,"San Francisco-Oakland-Fremont, CA","Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders",80,0.03,0.3,0
+118763,41860,"San Francisco-Oakland-Fremont, CA","Inspectors, Testers, Sorters, Samplers, and Weighers",6860,2.85,0.74,0
+118764,41860,"San Francisco-Oakland-Fremont, CA",Jewelers and Precious Stone and Metal Workers,260,0.11,0.71,0
+118765,41860,"San Francisco-Oakland-Fremont, CA",Dental Laboratory Technicians,310,0.13,0.58,2
+118766,41860,"San Francisco-Oakland-Fremont, CA",Medical Appliance Technicians,160,0.07,0.89,20
+118767,41860,"San Francisco-Oakland-Fremont, CA",Ophthalmic Laboratory Technicians,160,0.07,0.54,0
+118768,41860,"San Francisco-Oakland-Fremont, CA",Packaging and Filling Machine Operators and Tenders,3880,1.61,0.65,0
+118769,41860,"San Francisco-Oakland-Fremont, CA","Painting, Coating, and Decorating Workers",80,0.03,0.58,0
+118770,41860,"San Francisco-Oakland-Fremont, CA","Coating, Painting, and Spraying Machine Setters, Operators, and Tenders",1420,0.59,0.57,0
+118771,41860,"San Francisco-Oakland-Fremont, CA",Semiconductor Processing Technicians,250,0.1,0.5,7
+118772,41860,"San Francisco-Oakland-Fremont, CA",Photographic Process Workers and Processing Machine Operators,120,0.05,1.42,0
+118773,41860,"San Francisco-Oakland-Fremont, CA",Computer Numerically Controlled Tool Operators,1310,0.54,0.47,10
+118774,41860,"San Francisco-Oakland-Fremont, CA",Computer Numerically Controlled Tool Programmers,180,0.08,0.42,10
+118775,41860,"San Francisco-Oakland-Fremont, CA","Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders",180,0.08,0.84,0
+118776,41860,"San Francisco-Oakland-Fremont, CA",Etchers and Engravers,100,0.04,0.79,0
+118777,41860,"San Francisco-Oakland-Fremont, CA","Molders, Shapers, and Casters, Except Metal and Plastic",420,0.18,0.78,0
+118778,41860,"San Francisco-Oakland-Fremont, CA","Paper Goods Machine Setters, Operators, and Tenders",220,0.09,0.15,0
+118779,41860,"San Francisco-Oakland-Fremont, CA",Helpers--Production Workers,1710,0.71,0.66,10
+118780,41860,"San Francisco-Oakland-Fremont, CA","Production Workers, All Other",3510,1.46,0.81,14
+118781,41860,"San Francisco-Oakland-Fremont, CA",Transportation and Material Moving Occupations,156140,64.9,0.73,0
+118782,41860,"San Francisco-Oakland-Fremont, CA",Aircraft Cargo Handling Supervisors,240,0.1,1.53,1
+118783,41860,"San Francisco-Oakland-Fremont, CA","First-Line Supervisors of Transportation and Material Moving Workers, Except Aircraft Cargo Handling Supervisors",7560,3.14,0.8,0
+118784,41860,"San Francisco-Oakland-Fremont, CA","Airline Pilots, Copilots, and Flight Engineers",2490,1.04,1.61,0
+118785,41860,"San Francisco-Oakland-Fremont, CA",Commercial Pilots,530,0.22,0.65,10
+118786,41860,"San Francisco-Oakland-Fremont, CA",Air Traffic Controllers,420,0.17,1.2,6
+118787,41860,"San Francisco-Oakland-Fremont, CA",Airfield Operations Specialists,130,0.06,0.51,6
+118788,41860,"San Francisco-Oakland-Fremont, CA",Flight Attendants,4490,1.87,2.21,6
+118789,41860,"San Francisco-Oakland-Fremont, CA","Ambulance Drivers and Attendants, Except Emergency Medical Technicians",100,0.04,0.51,0
+118790,41860,"San Francisco-Oakland-Fremont, CA",Driver/Sales Workers,4720,1.96,0.73,9
+118791,41860,"San Francisco-Oakland-Fremont, CA",Heavy and Tractor-Trailer Truck Drivers,16870,7.01,0.52,3
+118792,41860,"San Francisco-Oakland-Fremont, CA",Light Truck Drivers,17080,7.1,1.1,4
+118793,41860,"San Francisco-Oakland-Fremont, CA","Bus Drivers, School",1110,0.46,0.18,37
+118794,41860,"San Francisco-Oakland-Fremont, CA","Bus Drivers, Transit and Intercity",5410,2.25,2.33,2
+118795,41860,"San Francisco-Oakland-Fremont, CA",Shuttle Drivers and Chauffeurs,3950,1.64,1.1,2
+118796,41860,"San Francisco-Oakland-Fremont, CA",Taxi Drivers,,,,87
+118797,41860,"San Francisco-Oakland-Fremont, CA","Motor Vehicle Operators, All Other",410,0.17,0.52,7
+118798,41860,"San Francisco-Oakland-Fremont, CA",Locomotive Engineers,,,,5
+118799,41860,"San Francisco-Oakland-Fremont, CA",Sailors and Marine Oilers,450,0.19,0.92,0
+118800,41860,"San Francisco-Oakland-Fremont, CA","Captains, Mates, and Pilots of Water Vessels",400,0.17,0.72,0
+118801,41860,"San Francisco-Oakland-Fremont, CA",Ship Engineers,130,0.05,0.96,0
+118802,41860,"San Francisco-Oakland-Fremont, CA",Parking Attendants,3860,1.6,1.84,23
+118803,41860,"San Francisco-Oakland-Fremont, CA",Automotive and Watercraft Service Attendants,1020,0.42,0.67,0
+118804,41860,"San Francisco-Oakland-Fremont, CA",Aircraft Service Attendants,160,0.07,0.36,5
+118805,41860,"San Francisco-Oakland-Fremont, CA",Traffic Technicians,100,0.04,0.83,0
+118806,41860,"San Francisco-Oakland-Fremont, CA",Transportation Inspectors,140,0.06,0.37,2
+118807,41860,"San Francisco-Oakland-Fremont, CA",Passenger Attendants,520,0.21,1.3,3
+118808,41860,"San Francisco-Oakland-Fremont, CA","Transportation Workers, All Other",130,0.06,0.79,79
+118809,41860,"San Francisco-Oakland-Fremont, CA",Conveyor Operators and Tenders,310,0.13,0.76,0
+118810,41860,"San Francisco-Oakland-Fremont, CA",Crane and Tower Operators,230,0.1,0.36,8
+118811,41860,"San Francisco-Oakland-Fremont, CA",Industrial Truck and Tractor Operators,6400,2.66,0.51,0
+118812,41860,"San Francisco-Oakland-Fremont, CA",Cleaners of Vehicles and Equipment,5200,2.16,0.89,10
+118813,41860,"San Francisco-Oakland-Fremont, CA","Laborers and Freight, Stock, and Material Movers, Hand",33130,13.77,0.71,0
+118814,41860,"San Francisco-Oakland-Fremont, CA",Machine Feeders and Offbearers,350,0.14,0.48,0
+118815,41860,"San Francisco-Oakland-Fremont, CA","Packers and Packagers, Hand",5620,2.34,0.6,0
+118816,41860,"San Francisco-Oakland-Fremont, CA",Stockers and Order Fillers,26230,10.9,0.6,0
+118817,41860,"San Francisco-Oakland-Fremont, CA","Pump Operators, Except Wellhead Pumpers",140,0.06,0.7,0
+118818,41860,"San Francisco-Oakland-Fremont, CA",Refuse and Recyclable Material Collectors,1920,0.8,0.89,0
+118819,41860,"San Francisco-Oakland-Fremont, CA","Material Moving Workers, All Other",990,0.41,2.53,10

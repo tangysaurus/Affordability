@@ -41,6 +41,40 @@ async def main(job_type, location):
             return pd.DataFrame(all_jobs)
     finally:
         pass
+
+async def fetch_jobs2(session, url, headers, params):
+    async with session.get(url, headers = headers, params = params) as response:
+        try:
+            data = await response.json()
+            return len(data.get("data", []))
+        except:
+            return 0
+
+async def main2(job_type, location):
+    url = "https://jsearch.p.rapidapi.com/search?"
+
+    headers = {
+        "x-rapidapi-host": "jsearch.p.rapidapi.com",
+        "x-rapidapi-key": os.getenv("x-rapidapi-key")
+    }
+    async with aiohttp.ClientSession() as session:
+
+        params_set = [{
+                "query": f"{job_type} in {location}",
+                "num_pages": "20",
+                "page": str((i - 1) * 20 + 1),
+                "date_posted": "month"
+            } for i in range(1, 6)]
+
+        tasks = [fetch_jobs2(session, url, headers, params) for params in params_set]
+        results = await asyncio.gather(*tasks)
+
+        count = 0
+
+        for result in results:
+            count += result
+
+    return count
             
 
 # extract job description and qualification info
@@ -73,7 +107,7 @@ def extract_job_info(df):
     df.set_index("id", inplace = True)
     return df
 
-# if __name__ == "__main__":
-#     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-#     df = asyncio.run(main("data scientist", "San Francisco"))
-#     print(df)
+if __name__ == "__main__":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    print(asyncio.run(main2("data scientist", "San Francisco")))
+

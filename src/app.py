@@ -7,9 +7,9 @@ import asyncio
 from dash import html, dcc
 from dash import Input, Output, State
 from dash.dependencies import ALL
-from fetch import main, extract_job_info
-from match import extract_resume_text_from_base64, get_matches
-from feedback import get_feedback, get_insights, get_followup_feedback
+from fetch_data import main, extract_job_info
+from job_match import extract_resume_text_from_base64, get_matches
+from llm_prompt import get_feedback, get_insights
 from dash.exceptions import PreventUpdate
 
 class App:
@@ -26,26 +26,31 @@ class App:
         navbar = dbc.Navbar(
             dbc.Container([
                 # Adding Font Awesome Icon via CDN link
-                html.Link(
-                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css", 
-                    rel="stylesheet"
-                ),
+                # html.Link(
+                #     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css", 
+                #     rel="stylesheet"
+                # ),
                 dbc.Row([
                     dbc.Col(
                         html.H2(
                             [
-                                html.I(className="fas fa-chalkboard-teacher", style={"marginRight": "10px"}),
-                                "Career Coach",
+                                html.Img(
+                                    src = "/assets/career_icon.png",
+                                    style={"height": "40px", "transform": "scale(1.4)", "marginRight": "10px", "position": "relative", "top": "4px" }
+                                ),
+                                # html.I(className="fas fa-chalkboard-teacher", style={"marginRight": "10px"}),
+                                "Career Match",
                             ],
-                            className="display-6 text-white mb-3"
+                            className="display-6 text-white mb-3",
+                            style={"display": "flex", "alignItems": "center", "fontWeight": "600"}
                         ),
                         width="auto"),  # Title
                     dbc.Col(
                         dbc.Nav([
                             dbc.NavLink("Home", href="/", active="exact", className="text-white"),
-                            dbc.NavLink("Compare by region", href="/page-1", active="exact", className="text-white"),
-                            dbc.NavLink("Compare by spending category", href="/page-2", active="exact", className="text-white"),
-                            dbc.NavLink("Search for jobs", href="/page-3", active="exact", className="text-white"),
+                            dbc.NavLink("Search for jobs", href="/page-1", active="exact", className="text-white"),
+                            dbc.NavLink("SOL by region", href="/page-2", active="exact", className="text-white"),
+                            dbc.NavLink("SOL by spending category", href="/page-3", active="exact", className="text-white")
                         ], navbar=True, pills = True), 
                         className="d-flex align-items-center"                   )
                 ], align = "center", className = "w-100")
@@ -72,7 +77,7 @@ class App:
             children=[
                 html.Div(
                     children=[
-                        html.H3("Welcome to Career Coach!", className="mb-4", style={'text-align': 'center', 'font-size': '2.5em'}),
+                        html.H3("Welcome to Career Match!", className="mb-4", style={'text-align': 'center', 'font-size': '2.5em'}),
                         html.P(
                             "If you're looking to advance your career, this is the place to be! \n"
                             "Match with jobs based on your resume, generate concise job breakdowns, and get personalized feedback to help you craft the most competitive job application.",
@@ -85,95 +90,35 @@ class App:
                             style={'text-align': 'center', 'margin-top': '30px'}
                         ),
                         html.P(
-                            "Also, don't forget to use the standard of living dashboard to see how your purchasing power varies across geography and spending category. \n"
-                            "We've compiled occupational wage data from the U.S. Bureau of Labor Statistics and regional price parity data from the U.S. Bureau of Economic Analysis to help you make the most informed decisions. \n"
-                            "Note: purchasing power = median annual salary / regional price parity * 100",
+                            "Also, don't forget to use the standard of living (SOL) dashboard to see how your purchasing power varies by geography and spending category. \n"
+                            "We've compiled occupational wages and regional price levels to help you make the most informed decisions. \n",
                             style={'text-align': 'center', 'font-size': '1.1em', 'margin-top': '20px', 'line-height': '1.6em'}
                         ),
                         html.Div(
                             children=[
-                                dcc.Link("Compare by region", href="/page-1", style={'display': 'block', 'margin-top': '20px', 'font-size': '1.2em', 'text-align': 'center'}),
-                                dcc.Link("Compare by spending category", href="/page-2", style={'display': 'block', 'margin-top': '10px', 'font-size': '1.2em', 'text-align': 'center'})
+                                dcc.Link("SOL by region", href="/page-1", style={'display': 'block', 'margin-top': '20px', 'font-size': '1.2em', 'text-align': 'center'}),
+                                dcc.Link("SOL by spending category", href="/page-2", style={'display': 'block', 'margin-top': '10px', 'font-size': '1.2em', 'text-align': 'center'})
                             ],
                             style={'text-align': 'center', 'margin-top': '30px'}
-                        ),
-                        html.H3("Our Mission", className="mb-4", style={'text-align': 'center', 'font-size': '2.5em', "margin-top": "50px"}),
-                        html.P(
-                            "It's simple, we want to empower you to make the best economic decisions! \n"
-                            "That's why we've built personalized tools to help you find and win the best jobs available. \n"
-                            "As your career coach, we hope to build your confidence so that you can go out and dominate the workforce.",
-                            style={'text-align': 'center', 'font-size': '1.1em', 'margin-top': '20px', 'line-height': '1.6em'}
                         )
                     ],
-                    style={'max-width': '800px', 'margin': '0 auto', 'padding': '20px'}
+                    style={
+                        'maxWidth': '800px',
+                        'width': '100%',
+                        'textAlign': 'center',  # Aligns all inner text
+                        'padding': '20px'
+                    }
                 )
-            ]
-    )
-
-    # Page 1 layout
-    def page1_layout(self):
-        return html.Div([
-            dcc.Dropdown(
-                id = "occupation-dropdown1",
-                options = [
-                    {"label": occupation, "value": occupation} for occupation in self.occupation_data["Occupation Title"].unique().tolist()
-                ],
-                value = "All Occupations",
-                multi = False,
-                style = {"width": "50%"}
-            ),
-            dcc.Dropdown(
-                id = "category-dropdown1",
-                options = [
-                    {"label": "All items", "value": "RPPs: All items"},
-                    {"label": "Goods", "value": "RPPs: Goods"},
-                    {"label": "Housing", "value": "RPPs: Services: Housing"},
-                    {"label": "Utilities", "value": "RPPs: Services: Utilities"},
-                    {"label": "Other Services", "value": "RPPs: Services: Other"}
-                ],
-                value = "RPPs: All items",
-                multi = False,
-                style = {"width": "50%"}
-            ),
-            dbc.Card([
-                dbc.CardBody([
-                    html.Div(id="output-page1"),
-                    dcc.Graph(id = "location-bar-chart")
-                ])
-            ])
-        ])
-
-    # Page 2 layout
-    def page2_layout(self):
-        return html.Div([
-            dcc.Dropdown(
-                id = "occupation-dropdown2",
-                options = [
-                    {"label": occupation, "value": occupation} for occupation in self.occupation_data["Occupation Title"].unique().tolist()
-                ],
-                value = "All Occupations",
-                multi = False,
-                style = {"width": "50%"}
-            ),
-            dcc.Dropdown(
-                id = "location-dropdown2",
-                options = [
-                    {"label": location, "value": location} for location in self.occupation_data["Area"].unique().tolist()
-                ],
-                value = "Abilene, TX",
-                multi = False,
-                style = {"width": "50%"}
-            ),
-            dbc.Card([
-                dbc.CardBody([
-                    html.Div(id="output-page2"),
-                    dcc.Graph(id = "rpp-bar-chart")
-                ])
-            ])
-        ])
+            ],
+            style={
+                'display': 'flex',
+                'justifyContent': 'center',
+                'padding': '40px',
+            }
+        )
     
-    # page 3 layout
-    def page3_layout(self):
+    # page 1 layout
+    def page1_layout(self):
         return html.Div([
             html.Div([
                 dbc.Row([
@@ -241,6 +186,68 @@ class App:
             html.Div(id = "output-page3", className = "mb-4")
         ])
 
+    # Page 2 layout
+    def page2_layout(self):
+        return html.Div([
+            dcc.Dropdown(
+                id = "occupation-dropdown1",
+                options = [
+                    {"label": occupation, "value": occupation} for occupation in self.occupation_data["Occupation Title"].unique().tolist()
+                ],
+                value = "All Occupations",
+                multi = False,
+                style = {"width": "50%"}
+            ),
+            dcc.Dropdown(
+                id = "category-dropdown1",
+                options = [
+                    {"label": "All items", "value": "RPPs: All items"},
+                    {"label": "Goods", "value": "RPPs: Goods"},
+                    {"label": "Housing", "value": "RPPs: Services: Housing"},
+                    {"label": "Utilities", "value": "RPPs: Services: Utilities"},
+                    {"label": "Other Services", "value": "RPPs: Services: Other"}
+                ],
+                value = "RPPs: All items",
+                multi = False,
+                style = {"width": "50%"}
+            ),
+            dbc.Card([
+                dbc.CardBody([
+                    html.Div(id="output-page1"),
+                    dcc.Graph(id = "location-bar-chart")
+                ])
+            ])
+        ])
+
+    # Page 3 layout
+    def page3_layout(self):
+        return html.Div([
+            dcc.Dropdown(
+                id = "occupation-dropdown2",
+                options = [
+                    {"label": occupation, "value": occupation} for occupation in self.occupation_data["Occupation Title"].unique().tolist()
+                ],
+                value = "All Occupations",
+                multi = False,
+                style = {"width": "50%"}
+            ),
+            dcc.Dropdown(
+                id = "location-dropdown2",
+                options = [
+                    {"label": location, "value": location} for location in self.occupation_data["Area"].unique().tolist()
+                ],
+                value = "Abilene, TX",
+                multi = False,
+                style = {"width": "50%"}
+            ),
+            dbc.Card([
+                dbc.CardBody([
+                    html.Div(id="output-page2"),
+                    dcc.Graph(id = "rpp-bar-chart")
+                ])
+            ])
+        ])
+
     def define_callbacks(self):
 
         # Page routing callback: Updates page content based on URL
@@ -259,55 +266,6 @@ class App:
             else:
                 return self.home_layout()
             
-        # Update page 1
-        @self.app.callback(
-            Output("location-bar-chart", "figure"),
-            Input("occupation-dropdown1", "value"),
-            Input("category-dropdown1", "value")
-        )
-            
-        def update_page1(occupation_input, category_input):
-
-            filtered_occupation_data = self.occupation_data[(self.occupation_data["Occupation Title"] == occupation_input) & (self.occupation_data["Category"] == category_input)]
-            filtered_occupation_data = filtered_occupation_data.sort_values(by = "Median Purchasing Power", ascending = False)
-
-            if filtered_occupation_data.empty:
-                return px.bar()
-
-            fig1 = px.bar(
-                filtered_occupation_data.head(8),
-                x = "Area",
-                y = "Median Purchasing Power",
-                title = "Metropolitan Areas with Highest Standard of Living",
-                labels = {"Median Purchasing Power" : "Median Purchasing Power", "Area": "Area"},
-                height = 400
-            )
-            
-            return fig1
-        
-        # Update page 2
-        @self.app.callback(
-            Output("rpp-bar-chart", "figure"),
-            Input("occupation-dropdown2", "value"),
-            Input("location-dropdown2", "value")
-        )
-
-        def update_page2(occupation_input, location_input):
-            filtered_occupation_data = self.occupation_data[(self.occupation_data["Occupation Title"] == occupation_input) & (self.occupation_data["Area"] == location_input)]
-            
-            if filtered_occupation_data.empty:
-                return px.bar()
-
-            fig2 = px.bar(
-                filtered_occupation_data.head(5),
-                x = "Category",
-                y = "Median Purchasing Power",
-                title = "Purchasing Power by Spending Category",
-                labels = {"Median Purchasing Power" : "Median Purchasing Power", "Category": "Category"},
-                height = 400
-            )
-            return fig2
-        
         # store resume text
         @self.app.callback(
             Output("upload-box-content", "children"),
@@ -334,7 +292,8 @@ class App:
             prevent_initial_call=True
         )
 
-        def update_page3(n_clicks, occupation, location, resume_text):
+        # update page 1
+        def update_page1(n_clicks, occupation, location, resume_text):
             if not resume_text:
                 return "Please upload a resume."
             
@@ -387,7 +346,7 @@ class App:
                             id="insight-toggle",
                             options=[
                                 {"label": "🧠 Job Breakdown", "value": "breakdown"},
-                                {"label": "💬 Resume Advisor", "value": "chatbot"},
+                                {"label": "💬 Resume Advisor", "value": "advisor"},
                             ],
                             value="breakdown",
                             inline=True,
@@ -410,65 +369,58 @@ class App:
             State("resume-text-store", "data"),
             State("job-data-store", "data"),
             State("match-data-store", "data"),
-            State("chat-store", "data"),
             prevent_initial_call=True
         )
 
-        def display_insight(n_clicks_list, toggle_value, resume_text, job_data_dict, match_data_dict, chat_data):
+        def display_insight(n_clicks_list, toggle_value, resume_text, job_data_dict, match_data_dict):
             if not any(n_clicks_list):
                 raise PreventUpdate
-
-            clicked_index = next(i for i, n in enumerate(n_clicks_list) if n)
-            job_data = pd.DataFrame.from_dict(job_data_dict)
-            top_matches = list(match_data_dict.items())
-            job_id = top_matches[clicked_index][0]
-
-            # chat option
-            if toggle_value == "chatbot":
-                if not chat_data:
-                    resume_feedback = get_feedback(resume_text, job_data.loc[job_id, "title"], job_data.loc[job_id, "description"])
-                    print(resume_feedback)
-                    feedback_obj = json.loads(resume_feedback)
-                    pretty_feedback = json.dumps(feedback_obj, indent=2)
-                    chat_data = [{"role": "assistant", "content": pretty_feedback}]
-
-                messages = html.Div([
-                    html.Div(msg["content"],
-                        style={
-                            "backgroundColor": "#d1e7dd" if msg["role"] == "assistant" else "#ffffff",
-                            "padding": "8px", "marginBottom": "5px", "borderRadius": "8px"
-                        }
-                    ) for msg in chat_data
-                ], style={"maxHeight": "300px", "overflowY": "auto"})
-
-                return html.Div([
-                    dbc.Card([
-                        dbc.CardHeader("💬 Resume Advisor"),
-                        dbc.CardBody([
-                            messages,
-                            dbc.Input(id="chat-input", type="text", placeholder="Ask a follow-up...", className="mt-2"),
-                            dbc.Button("Send", id="chat-send", className="mt-2")
-                        ])
-                    ])
-                ])
-
-            # Get insights for that job
-            raw_insights = get_insights(job_data.loc[job_id, "title"], job_data.loc[job_id, "description"])
-            print(raw_insights)
-            try:
-                insights = json.loads(raw_insights)
-            except json.JSONDecodeError:
-                return html.Div("Sorry, couldn't parse insights.")
             
             def render_list(items):
                 if isinstance(items, list):
                     return html.Ul([html.Li(item) for item in items])
                 else:
                     return html.P(items or "N/A")
+
+            clicked_index = next(i for i, n in enumerate(n_clicks_list) if n)
+            job_data = pd.DataFrame.from_dict(job_data_dict)
+            top_matches = list(match_data_dict.items())
+            job_id = top_matches[clicked_index][0]
+
+            # Get feedback
+            if toggle_value == "advisor":
+                raw_advice = get_feedback(resume_text, job_data.loc[job_id, "title"], job_data.loc[job_id, "description"])
+                try:
+                    advice = json.loads(raw_advice)
+                except json.JSONDecodeError:
+                    return html.Div("Sorry, couldn't parse insights.")
+                
+                # Then update your Card layout
+                return dbc.Card([
+                    dbc.CardBody([
+                        html.H6("General Fit"),
+                        render_list(advice.get("How well does this resume match the job description?")),
+
+                        html.H6("Strengths"),
+                        render_list(advice.get("Highlight key skills, experiences, or qualifications in the resume that make me a good fit for this job.")),
+
+                        html.H6("Weaknesses"),
+                        render_list(advice.get("Point out any potential gaps or areas where I might need to improve to increase my chances for this role.")),
+
+                        html.H6("Should you apply"),
+                        render_list(advice.get("Overall, would you recommend I apply for this job? Why or why not?"))
+                    ])
+                ], className="shadow-sm mt-3", style={"borderRadius": "12px"})
+            
+            # Get insights for that job
+            raw_insights = get_insights(job_data.loc[job_id, "title"], job_data.loc[job_id, "description"])
+            try:
+                insights = json.loads(raw_insights)
+            except json.JSONDecodeError:
+                return html.Div("Sorry, couldn't parse insights.")
             
             # Then update your Card layout
             return dbc.Card([
-                dbc.CardHeader("🧠 Job Breakdown"),
                 dbc.CardBody([
                     html.H6("Main Responsibilities"),
                     render_list(insights.get("main_responsibilities")),
@@ -489,23 +441,55 @@ class App:
                     html.P(insights.get("automation_risk", "N/A"))
                 ])
             ], className="shadow-sm mt-3", style={"borderRadius": "12px"})
-        
+            
+        # Update page 2
         @self.app.callback(
-            Output("chat-store", "data"),
-            Input("chat-send", "n_clicks"),
-            State("chat-input", "value"),
-            State("chat-store", "data"),
-            prevent_initial_call=True
+            Output("location-bar-chart", "figure"),
+            Input("occupation-dropdown1", "value"),
+            Input("category-dropdown1", "value")
+        )
+            
+        def update_page1(occupation_input, category_input):
+
+            filtered_occupation_data = self.occupation_data[(self.occupation_data["Occupation Title"] == occupation_input) & (self.occupation_data["Category"] == category_input)]
+            filtered_occupation_data = filtered_occupation_data.sort_values(by = "Median Purchasing Power", ascending = False)
+
+            if filtered_occupation_data.empty:
+                return px.bar()
+
+            fig1 = px.bar(
+                filtered_occupation_data.head(8),
+                x = "Area",
+                y = "Median Purchasing Power",
+                title = "Metropolitan Areas with Highest Standard of Living",
+                labels = {"Median Purchasing Power" : "Median Purchasing Power", "Area": "Area"},
+                height = 400
+            )
+            
+            return fig1
+        
+        # Update page 3
+        @self.app.callback(
+            Output("rpp-bar-chart", "figure"),
+            Input("occupation-dropdown2", "value"),
+            Input("location-dropdown2", "value")
         )
 
-        def update_chat(n_clicks, user_input, chat_history):
-            if not user_input:
-                raise PreventUpdate
+        def update_page2(occupation_input, location_input):
+            filtered_occupation_data = self.occupation_data[(self.occupation_data["Occupation Title"] == occupation_input) & (self.occupation_data["Area"] == location_input)]
+            
+            if filtered_occupation_data.empty:
+                return px.bar()
 
-            chat_history.append({"role": "user", "content": user_input})
-            ai_reply = get_followup_feedback(chat_history)
-            chat_history.append({"role": "assistant", "content": ai_reply})
-            return chat_history
+            fig2 = px.bar(
+                filtered_occupation_data.head(5),
+                x = "Category",
+                y = "Median Purchasing Power",
+                title = "Purchasing Power by Spending Category",
+                labels = {"Median Purchasing Power" : "Median Purchasing Power", "Category": "Category"},
+                height = 400
+            )
+            return fig2
 
     def start(self):
         self.app.run(debug = True)
