@@ -7,11 +7,11 @@ import asyncio
 from dash import html, dcc
 from dash import Input, Output, State
 from dash.dependencies import ALL
-from fetch_data import main, extract_job_info
-from job_match import extract_resume_text_from_base64, get_matches
-from llm_prompt import get_feedback, get_insights
+from src.fetch_data import main, extract_job_info
+from src.job_match import extract_resume_text_from_base64, get_matches
+from src.llm_prompt import get_feedback, get_insights
 from dash.exceptions import PreventUpdate
-from purchasing_power import run
+from src.purchasing_power import run
 
 class App:
     def __init__(self, occupation_data):
