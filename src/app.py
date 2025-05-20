@@ -294,7 +294,7 @@ class App:
             if not resume_text:
                 return "Please upload a resume."
             
-            asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+            # asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
             job_data = extract_job_info(asyncio.run(main(occupation, location)))
             matches = get_matches(resume_text, job_data)
 
