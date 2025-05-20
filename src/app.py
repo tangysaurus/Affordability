@@ -4,6 +4,7 @@ import dash_bootstrap_components as dbc
 import json
 import pandas as pd
 import asyncio
+import os
 from dash import html, dcc
 from dash import Input, Output, State
 from dash.dependencies import ALL
@@ -488,7 +489,8 @@ class App:
             return fig2
 
     def start(self):
-        self.app.run(debug = True)
+        port = int(os.environ.get("PORT", 8050)) 
+        self.app.run(debug = True, host="0.0.0.0", port=port)
 
 occupation_data = run()
 dashboard = App(occupation_data)
